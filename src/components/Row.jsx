@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Row = ({ title, items, isLargeRow, onSelect, className = "" }) => {
+const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName = "" }) => {
     const rowRef = useRef(null);
     const [isMoved, setIsMoved] = useState(false);
 
@@ -52,7 +52,7 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "" }) => {
                             return (
                                 <div
                                     key={item.id || index}
-                                    className="relative group/item min-w-[280px] md:min-w-[400px] h-[160px] md:h-[240px] flex items-center cursor-pointer mr-0 hover:z-50"
+                                    className={`relative group/item min-w-[220px] md:min-w-[340px] h-[160px] md:h-[240px] flex items-center cursor-pointer mr-0 hover:z-50 ${itemClassName}`}
                                     onClick={() => onSelect(item)}
                                 >
                                     {/* Big Number (Left side, ON TOP) */}
@@ -78,7 +78,7 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "" }) => {
                                     {/* Z-index: 10 -> Places image behind number */}
                                     {/* Special spacing for double-digit rank (10) to avoid overlapping the '0' */}
                                     <div
-                                        className={`relative -ml-2 md:-ml-4 h-full w-[120px] md:w-[200px] shrink-0 rounded-sm overflow-hidden z-10 transition duration-300 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] shadow-lg`}
+                                        className={`relative -ml-2 md:-ml-4 h-full w-[120px] md:w-[200px] shrink-0 rounded-sm overflow-hidden z-10 transition duration-300 ease-out translate-y-2 md:translate-y-4 hover:scale-110 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] shadow-lg`}
                                         style={{ marginLeft: item.rank == 10 ? '60px' : '' }}
                                     >
                                         {item.image ? (
@@ -105,7 +105,7 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "" }) => {
                         return (
                             <div
                                 key={item.id || index}
-                                className={`relative min-w-[180px] md:min-w-[240px] cursor-pointer transition duration-300 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:z-50 group-hover/item:opacity-100 ${isLargeRow ? 'h-[280px] md:min-w-[400px]' : 'h-[140px]'} rounded-sm overflow-hidden`}
+                                className={`relative min-w-[180px] md:min-w-[240px] cursor-pointer transition duration-300 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:z-50 group-hover/item:opacity-100 ${isLargeRow ? 'h-[280px] md:min-w-[400px]' : 'h-[140px]'} rounded-sm overflow-hidden ${itemClassName}`}
                                 onClick={() => onSelect(item)}
                             >
                                 <div className="absolute inset-0 bg-[#2f2f2f] animate-pulse -z-10" />
