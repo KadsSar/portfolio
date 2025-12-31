@@ -19,9 +19,18 @@ const Hero = () => {
 
             {/* Content */}
             <div className="relative z-10 flex flex-col justify-center h-full px-4 md:px-12 w-full md:w-2/3 lg:w-1/2 space-y-6 pt-20">
-                <h1 className="text-6xl md:text-9xl font-bold tracking-wide drop-shadow-2xl animate-fade-in-up font-['Bebas_Neue'] text-[#E50914]">
+                <h1 className="text-5xl md:text-8xl font-bold tracking-widest drop-shadow-[0_5px_5px_rgba(0,0,0,1)] animate-fade-in-up font-['Boycott'] text-white uppercase">
                     {userData.name}
                 </h1>
+
+                {/* Metadata Row */}
+                <div className="flex items-center space-x-4 text-gray-300 text-sm md:text-lg font-medium drop-shadow-md">
+                    <span className="text-[#46d369]">98% Match</span>
+                    <span>Resume</span>
+                    <span className="text-gray-500">•</span>
+                    <span>Contact Information</span>
+                    <span className="border border-gray-500 px-2 text-xs rounded text-gray-400">HD</span>
+                </div>
 
                 <p className="text-sm md:text-base font-normal drop-shadow-md text-gray-300 max-w-lg line-clamp-3">
                     {userData.logline}

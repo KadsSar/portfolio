@@ -22,7 +22,7 @@ function App() {
 
       <Hero />
 
-      <div className="relative z-20 -mt-32 md:-mt-52 pl-4 md:pl-12 pb-12 space-y-8">
+      <div className="relative z-20 -mt-10 md:-mt-16 pl-4 md:pl-12 pb-12 space-y-8">
         {/* Projects Row */}
         <Row
           title="Latest Releases"
