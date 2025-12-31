@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/boycott');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +11,60 @@
     font-family: 'Inter', sans-serif;
   }
 }
+
+/* Realistic Lightning Flicker */
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0;
+  }
+
+  6% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.5;
+  }
+
+  12% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-flicker {
+  animation: flicker 6s infinite linear;
+  animation-delay: 2s;
+  /* Randomize start slightly via props if needed, but CSS delay here helps */
+}
+
+/* Secondary flicker for different bolts to desync them */
+.animate-flicker-2 {
+  animation: flicker 8s infinite linear;
+  animation-delay: 5s;
+}
+
+/* Very fast, sharp strike */
+.animate-quick-strike {
+  animation: flicker 4s infinite linear;
+  /* Faster loop */
+}
+
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {

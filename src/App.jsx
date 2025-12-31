@@ -5,6 +5,8 @@ import Row from './components/Row';
 import Modal from './components/Modal';
 import { projects, skills, experience, genres } from './data';
 
+
+
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -22,7 +24,7 @@ function App() {
 
       <Hero />
 
-      <div className="relative z-20 -mt-10 md:-mt-16 pl-4 md:pl-12 pb-12 space-y-8">
+      <div className="relative z-20 -mt-2 md:-mt-4 pl-4 md:pl-12 pb-12 space-y-2">
         {/* Projects Row */}
         <Row
           title="Latest Releases"
@@ -36,11 +38,12 @@ function App() {
           items={skills}
           isLargeRow={true}
           onSelect={handleSelect}
+          className="!-mt-12 md:!-mt-24 relative z-30"
         />
 
         {/* Top Picks for You (Experience) */}
         <Row
-          title="Top Picks for You"
+          title={<>Top Picks<br />For You</>}
           items={experience}
           onSelect={handleSelect}
         />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Bell, Search, User, Menu, X, Github, Linkedin, Briefcase, Info, FileText } from 'lucide-react';
+import { Bell, Search, User, Menu, X, Github, Linkedin, Briefcase, Info, FileText, CircleUser } from 'lucide-react';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -98,9 +98,7 @@ const Navbar = () => {
                         <Search className="w-5 h-5 cursor-pointer hover:text-gray-300 transition" />
                         <Bell className="w-5 h-5 cursor-pointer hover:text-gray-300 transition" />
                         <div className="flex items-center space-x-2 cursor-pointer group">
-                            <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
-                                <User size={20} />
-                            </div>
+                            <CircleUser className="w-9 h-9 text-white hover:text-gray-300 transition" strokeWidth={1.5} />
                         </div>
                     </div>
                 </div>
