@@ -38,7 +38,7 @@ function App() {
           items={skills}
           isLargeRow={true}
           onSelect={handleSelect}
-          className="!-mt-12 md:!-mt-24 relative z-30"
+          className="!-mt-4 md:!-mt-10 relative z-30"
         />
 
         {/* Top Picks for You (Experience) */}
@@ -46,6 +46,8 @@ function App() {
           title={<>Top Picks<br />For You</>}
           items={experience}
           onSelect={handleSelect}
+          className="!-mt-4 md:!-mt-10 relative z-20 [&_.scrollbar-hide]:pt-20 md:[&_.scrollbar-hide]:pt-32"
+          itemClassName="-translate-y-8 md:-translate-y-16"
         />
 
         {/* Select Genre (Background) */}
@@ -53,6 +55,7 @@ function App() {
           title="Select Genre"
           items={genres}
           onSelect={handleSelect}
+          className="!-mt-4 md:!-mt-10 relative z-10"
         />
       </div>
 
