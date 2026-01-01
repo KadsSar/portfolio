@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName = "" }) => {
+const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName = "", titleBackgroundImage = null }) => {
     const rowRef = useRef(null);
     const [isMoved, setIsMoved] = useState(false);
 
@@ -19,7 +19,7 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName
     };
 
     return (
-        <div className={`space-y-2 md:px-12 px-4 mb-8 group ${className}`}>
+        <div className={`space-y-2 md:px-12 px-4 mb-0 group ${className}`}>
 
             <div className="relative group/row">
                 {/* Left Arrow */}
@@ -30,17 +30,34 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName
 
                 <div
                     ref={rowRef}
-                    className="flex items-center space-x-2.5 overflow-x-scroll scrollbar-hide md:space-x-3.5 no-scrollbar py-10 px-4"
+                    className="flex items-end space-x-2.5 overflow-x-scroll scrollbar-hide md:space-x-3.5 no-scrollbar py-4 px-4"
                 >
                     {/* Title Card - First Item */}
                     <div
-                        className={`relative min-w-[200px] md:min-w-[240px] flex flex-col justify-end p-4 shrink-0 transition duration-200 ease-out z-10 ${isLargeRow ? 'h-[280px] md:min-w-[400px] pb-14' : 'h-[140px]'}`}
+                        className={`relative min-w-[200px] md:min-w-[240px] flex flex-col justify-end p-4 shrink-0 transition duration-200 ease-out z-10 overflow-hidden rounded-md ${isLargeRow ? 'h-[280px] md:min-w-[400px] pb-14' : 'h-[200px]'}`}
                     >
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-['Rubik_Distressed'] text-[#E50914] leading-[0.85] tracking-wide uppercase break-words drop-shadow-lg">
+                        {/* Detail Background Image if provided */}
+                        {titleBackgroundImage && (
+                            <>
+                                <img
+                                    src={titleBackgroundImage}
+                                    className="absolute inset-0 w-full h-full object-cover z-0 opacity-80"
+                                    alt="Row Background"
+                                />
+                                {/* Gradients for Seamless Blending - Aggressive Fade */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#141414] from-20% via-transparent to-transparent z-0" />
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#141414] from-20% via-transparent to-transparent z-0" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#141414] from-20% via-transparent to-transparent z-0" />
+                                <div className="absolute inset-0 bg-gradient-to-l from-[#141414] from-20% via-transparent to-transparent z-0" />
+                                <div className="absolute inset-0 bg-black/20 z-0" />
+                            </>
+                        )}
+
+                        <h2 className="relative z-10 text-4xl md:text-5xl lg:text-6xl font-['Rubik_Distressed'] text-[#E50914] leading-[0.85] tracking-wide uppercase break-words drop-shadow-lg">
                             {title}
                         </h2>
 
-                        <div className="flex items-center mt-2 text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase opacity-80">
+                        <div className="relative z-10 flex items-center mt-2 text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase opacity-80">
                             <span>Drag to next</span>
                             <span className="ml-2 text-base">→</span>
                         </div>
