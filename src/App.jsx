@@ -22,6 +22,7 @@ function App() {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      {/* 3D Background Layer */}
       <Background3D />
       <Navbar />
 

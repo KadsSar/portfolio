@@ -12,33 +12,32 @@ export const userData = {
 
 export const projects = [
     {
-        id: 1,
-        title: "Nutribudget",
-        desc: "Price-aware nutrition planner using GroceryDB (nutrition + prices) with ML clustering, optimization, a Flask API, and a Next.js dashboard.",
-        image: "https://images.unsplash.com/photo-1506617420156-8e4536971650?w=800&q=80", // Placeholder until verified
-        tags: ["Next.js", "Flask", "ML", "Python"]
+        id: 4,
+        title: "Jurassic Park Interactive",
+        desc: "An immersive 3D digital tour of Isla Nublar features an on-rails camera system, 'Bio-Scan' shaders, and interactive AR data panels for a VIP visitor experience.",
+        image: "/assets/jurassic_thumbnail.png",
+        tags: ["R3F", "Three.js", "GSAP", "Tailwind"]
+    },
+    {
+        id: 3,
+        title: "LOGOS: The Semantic Platformer",
+        desc: "A 2D puzzle platformer where players type words to modify the environment (spawn bridges, balloons) using a semantic lookup system and Matter.js physics.",
+        image: "/assets/logos_thumbnail.png",
+        tags: ["Game Design", "Matter.js", "JavaScript", "Algorithms"]
     },
     {
         id: 2,
         title: "Spatial AR/VR",
         desc: "Coming Soon: A revolutionary mixed reality experience redefining spatial interaction.",
-        image: "https://images.unsplash.com/photo-1626387346567-2cd2dc03e6fb?w=800&q=80", // Placeholder
+        image: "/assets/virtual_museum_thumbnail.png",
         tags: ["Unity", "AR/VR", "C#"]
     },
-    // Added a couple more placeholders to make the row look full like Netflix
     {
-        id: 3,
-        title: "Portfolio V1",
-        desc: "Previous iteration of personal portfolio focusing on minimal design.",
-        image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80",
-        tags: ["React", "CSS"]
-    },
-    {
-        id: 4,
-        title: "Game Engine",
-        desc: "Custom C++ game engine with physics simulations and raycasting.",
-        image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80",
-        tags: ["C++", "OpenGL"]
+        id: 1,
+        title: "Nutribudget",
+        desc: "Price-aware nutrition planner using GroceryDB (nutrition + prices) with ML clustering, optimization, a Flask API, and a Next.js dashboard.",
+        image: "/assets/nutribudget_thumbnail.png",
+        tags: ["Next.js", "Flask", "ML", "Python"]
     }
 ];
 

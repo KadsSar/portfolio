@@ -24,7 +24,7 @@ const Background3D = () => {
 
         // Particles
         const particlesGeometry = new THREE.BufferGeometry();
-        const particlesCount = 5000;
+        const particlesCount = 2000;
 
         const posArray = new Float32Array(particlesCount * 3);
 
