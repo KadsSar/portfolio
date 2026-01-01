@@ -11,9 +11,10 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName
         if (rowRef.current) {
             const { scrollLeft, clientWidth } = rowRef.current;
             const scrollTo = direction === "left"
-                ? scrollLeft - clientWidth / 2
-                : scrollLeft + clientWidth / 2;
+                ? scrollLeft - clientWidth
+                : scrollLeft + clientWidth;
 
+            console.log("Scrolling to:", scrollTo); // Debug log
             rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
         }
     };
@@ -24,7 +25,7 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName
             <div className="relative group/row">
                 {/* Left Arrow */}
                 <ChevronLeft
-                    className={`absolute top-0 bottom-0 left-2 z-40 m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover/row:opacity-100 ${!isMoved && "hidden"}`}
+                    className={`absolute top-0 bottom-0 left-2 z-[60] m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover/row:opacity-100 ${!isMoved && "hidden"}`}
                     onClick={() => handleClick("left")}
                 />
 
@@ -151,7 +152,7 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName
 
                 {/* Right Arrow */}
                 <ChevronRight
-                    className="absolute top-0 bottom-0 right-2 z-40 m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover/row:opacity-100"
+                    className="absolute top-0 bottom-0 right-2 z-[60] m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover/row:opacity-100"
                     onClick={() => handleClick("right")}
                 />
             </div>
