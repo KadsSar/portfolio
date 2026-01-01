@@ -24,13 +24,23 @@ const Background3D = () => {
 
         // Particles
         const particlesGeometry = new THREE.BufferGeometry();
-        const particlesCount = 2000;
+        const particlesCount = 5000;
 
         const posArray = new Float32Array(particlesCount * 3);
 
-        for (let i = 0; i < particlesCount * 3; i++) {
-            // Spread particles in a wide area
-            posArray[i] = (Math.random() - 0.5) * 1500;
+        for (let i = 0; i < particlesCount * 3; i += 3) {
+            // Mix of global spread and left-side cluster (near titles)
+            if (i < (particlesCount * 3) / 2) {
+                // Global Spread (50%)
+                posArray[i] = (Math.random() - 0.5) * 1800; // x
+                posArray[i + 1] = (Math.random() - 0.5) * 1200; // y
+                posArray[i + 2] = (Math.random() - 0.5) * 1000; // z
+            } else {
+                // Left Side Cluster (50%) - Concentrated near -400 to 0 X
+                posArray[i] = (Math.random() * 800) - 600; // x: -600 to +200
+                posArray[i + 1] = (Math.random() - 0.5) * 1200; // y: similar height
+                posArray[i + 2] = (Math.random() - 0.5) * 800; // z: tighter depth
+            }
         }
 
         particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
