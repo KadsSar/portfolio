@@ -1,6 +1,5 @@
-@import url('https://fonts.cdnfonts.com/css/boycott');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+@import url('https://fonts.cdnfonts.com/css/tribeca');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200;300;400;500;600;700;800&family=Rubik+Distressed&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

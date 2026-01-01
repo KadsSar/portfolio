@@ -16,6 +16,8 @@ export const projects = [
         title: "Jurassic Park Interactive",
         desc: "An immersive 3D digital tour of Isla Nublar features an on-rails camera system, 'Bio-Scan' shaders, and interactive AR data panels for a VIP visitor experience.",
         image: "/assets/jurassic_thumbnail.png",
+        modalImage: "/assets/jurassic_gate_modal.png",
+        youtubeId: "Lun2iYYp_TE",
         tags: ["R3F", "Three.js", "GSAP", "Tailwind"]
     },
     {
@@ -27,7 +29,7 @@ export const projects = [
     },
     {
         id: 2,
-        title: "Spatial AR/VR",
+        title: "Museum AR/VR",
         desc: "Coming Soon: A revolutionary mixed reality experience redefining spatial interaction.",
         image: "/assets/virtual_museum_thumbnail.png",
         tags: ["Unity", "AR/VR", "C#"]
