@@ -27,7 +27,7 @@ function App() {
 
       <Hero />
 
-      <div className="relative z-20 -mt-2 md:-mt-4 pl-4 md:pl-12 pb-12 space-y-2">
+      <div className="relative z-20 -mt-2 md:-mt-4 pl-4 md:pl-12 xl:pl-16 pb-12 space-y-2">
         {/* Projects Row */}
         <Row
           title="Latest Releases"
@@ -41,7 +41,7 @@ function App() {
           items={skills}
           isLargeRow={true}
           onSelect={handleSelect}
-          className="!-mt-4 md:!-mt-10 relative z-30"
+          className="!-mt-4 md:!-mt-10 lg:!-mt-12 xl:!-mt-16 relative z-30"
         />
 
         {/* Top Picks for You (Experience) */}
@@ -49,7 +49,7 @@ function App() {
           title={<>Top Picks<br />For You</>}
           items={experience}
           onSelect={handleSelect}
-          className="mt-8 md:mt-4 relative z-20 [&_.scrollbar-hide]:pt-20 md:[&_.scrollbar-hide]:pt-32"
+          className="!-mt-2 md:!-mt-8 lg:!-mt-10 xl:!-mt-12 relative z-20 [&_.scrollbar-hide]:pt-20 md:[&_.scrollbar-hide]:pt-32"
           itemClassName="-translate-y-8 md:-translate-y-16 hover:!-translate-y-10 md:hover:!-translate-y-20"
         />
 
@@ -58,7 +58,7 @@ function App() {
           title="Select Genre"
           items={genres}
           onSelect={handleSelect}
-          className="!-mt-4 md:!-mt-10 relative z-10"
+          className="!-mt-6 md:!-mt-14 lg:!-mt-18 xl:!-mt-24 relative z-10"
         />
       </div>
 
