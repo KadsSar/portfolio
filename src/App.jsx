@@ -7,6 +7,8 @@ import { projects, skills, experience, genres } from './data';
 
 
 
+import Background3D from './components/Background3D';
+
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -19,7 +21,8 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#141414] overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-hidden">
+      <Background3D />
       <Navbar />
 
       <Hero />
@@ -46,8 +49,8 @@ function App() {
           title={<>Top Picks<br />For You</>}
           items={experience}
           onSelect={handleSelect}
-          className="!-mt-4 md:!-mt-10 relative z-20 [&_.scrollbar-hide]:pt-20 md:[&_.scrollbar-hide]:pt-32"
-          itemClassName="-translate-y-8 md:-translate-y-16"
+          className="mt-8 md:mt-4 relative z-20 [&_.scrollbar-hide]:pt-20 md:[&_.scrollbar-hide]:pt-32"
+          itemClassName="-translate-y-8 md:-translate-y-16 hover:!-translate-y-10 md:hover:!-translate-y-20"
         />
 
         {/* Select Genre (Background) */}
