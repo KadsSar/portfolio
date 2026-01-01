@@ -6,7 +6,7 @@ import Modal from './components/Modal';
 import { projects, skills, experience, genres } from './data';
 
 
-
+// 3D Background
 import Background3D from './components/Background3D';
 
 function App() {
