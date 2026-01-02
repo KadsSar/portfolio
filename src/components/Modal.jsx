@@ -24,6 +24,7 @@ const Modal = ({ item, onClose }) => {
                 {/* Font Imports */}
                 <style>{`
                     @import url('https://fonts.cdnfonts.com/css/minecrafter');
+                    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
                 `}</style>
 
                 {/* Hero Section of Modal */}
@@ -62,9 +63,11 @@ const Modal = ({ item, onClose }) => {
                     <div className="absolute bottom-10 left-10 z-20 space-y-4">
                         <h2
                             className={`text-4xl font-bold ${(item.title === "Jurassic Park Interactive")
-                                    ? "text-[#d9901c] font-['Tribeca'] text-5xl font-normal tracking-widest drop-shadow-lg"
-                                    : (item.title.includes("LOGOS"))
-                                        ? "text-red-600 font-['Minecrafter'] text-5xl font-normal tracking-wide drop-shadow-md"
+                                ? "text-[#d9901c] font-['Tribeca'] text-5xl font-normal tracking-widest drop-shadow-lg"
+                                : (item.title.includes("LOGOS"))
+                                    ? "text-red-600 font-['Minecrafter'] text-5xl font-normal tracking-wide drop-shadow-md"
+                                    : (item.title === "Museum AR/VR")
+                                        ? "text-cyan-400 font-['Cinzel'] text-5xl font-bold tracking-widest drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
                                         : "text-white"
                                 }`}
                             style={{
@@ -72,7 +75,9 @@ const Modal = ({ item, onClose }) => {
                                     ? "'Tribeca', sans-serif"
                                     : (item.title.includes("LOGOS"))
                                         ? "'Minecrafter', sans-serif"
-                                        : "inherit"
+                                        : (item.title === "Museum AR/VR")
+                                            ? "'Cinzel', serif"
+                                            : "inherit"
                             }}
                         >
                             {item.title || item.name}
