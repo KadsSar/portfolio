@@ -35,6 +35,8 @@ export const projects = [
         title: "Museum AR/VR",
         desc: "Coming Soon: A revolutionary mixed reality experience redefining spatial interaction.",
         image: "/assets/virtual_museum_thumbnail.png",
+        youtubeId: "3JTeDoyDd0Q",
+        videoPosition: "w-[250%] h-[250%] -top-[25%] -left-[75%]",
         tags: ["Unity", "AR/VR", "C#"]
     },
     {
