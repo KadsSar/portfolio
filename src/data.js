@@ -18,6 +18,7 @@ export const projects = [
         image: "/assets/jurassic_thumbnail.png",
         modalImage: "/assets/jurassic_gate_modal.png",
         youtubeId: "Lun2iYYp_TE",
+        videoPosition: "w-[250%] h-[250%] -top-[35%] -left-[75%] scale-100", // Custom position for Jurassic
         tags: ["R3F", "Three.js", "GSAP", "Tailwind"]
     },
     {
@@ -25,6 +26,8 @@ export const projects = [
         title: "LOGOS: The Semantic Platformer",
         desc: "A 2D puzzle platformer where players type words to modify the environment (spawn bridges, balloons) using a semantic lookup system and Matter.js physics.",
         image: "/assets/logos_thumbnail.png",
+        videoPosition: "w-[250%] h-[250%] -top-[60%] -left-[75%]", // Reverted height to original 250%
+        youtubeId: "lzK9URfHFKM",
         tags: ["Game Design", "Matter.js", "JavaScript", "Algorithms"]
     },
     {

@@ -21,6 +21,11 @@ const Modal = ({ item, onClose }) => {
                     <X className="w-5 h-5 text-white" />
                 </button>
 
+                {/* Font Imports */}
+                <style>{`
+                    @import url('https://fonts.cdnfonts.com/css/minecrafter');
+                `}</style>
+
                 {/* Hero Section of Modal */}
                 <div className="relative h-[50vh] w-full bg-black overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent z-20 pointer-events-none" />
@@ -42,7 +47,7 @@ const Modal = ({ item, onClose }) => {
                     {item.youtubeId && (
                         <div className="absolute inset-0 w-full h-full z-10 overflow-hidden pointer-events-none">
                             <iframe
-                                className={`w-[250%] h-[250%] absolute -top-[35%] -left-[75%] object-cover pointer-events-none transition-opacity duration-1000 ease-in-out ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+                                className={`absolute ${item.videoPosition || "w-[250%] h-[250%] -top-[15%] -left-[75%]"} object-cover pointer-events-none transition-opacity duration-1000 ease-in-out ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
                                 src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.youtubeId}&showinfo=0&modestbranding=1&iv_load_policy=3&rel=0`}
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -57,10 +62,18 @@ const Modal = ({ item, onClose }) => {
                     <div className="absolute bottom-10 left-10 z-20 space-y-4">
                         <h2
                             className={`text-4xl font-bold ${(item.title === "Jurassic Park Interactive")
-                                ? "text-[#d9901c] font-['Tribeca'] text-5xl font-normal tracking-widest drop-shadow-lg"
-                                : "text-white"
+                                    ? "text-[#d9901c] font-['Tribeca'] text-5xl font-normal tracking-widest drop-shadow-lg"
+                                    : (item.title.includes("LOGOS"))
+                                        ? "text-red-600 font-['Minecrafter'] text-5xl font-normal tracking-wide drop-shadow-md"
+                                        : "text-white"
                                 }`}
-                            style={item.title === "Jurassic Park Interactive" ? { fontFamily: "'Tribeca', sans-serif" } : {}}
+                            style={{
+                                fontFamily: (item.title === "Jurassic Park Interactive")
+                                    ? "'Tribeca', sans-serif"
+                                    : (item.title.includes("LOGOS"))
+                                        ? "'Minecrafter', sans-serif"
+                                        : "inherit"
+                            }}
                         >
                             {item.title || item.name}
                         </h2>
