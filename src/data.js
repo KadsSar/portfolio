@@ -44,6 +44,7 @@ export const projects = [
         title: "Nutribudget",
         desc: "Price-aware nutrition planner using GroceryDB (nutrition + prices) with ML clustering, optimization, a Flask API, and a Next.js dashboard.",
         image: "/assets/nutribudget_thumbnail.png",
+        link: "https://github.com/KadsSar/nutribudget",
         tags: ["Next.js", "Flask", "ML", "Python"]
     }
 ];
