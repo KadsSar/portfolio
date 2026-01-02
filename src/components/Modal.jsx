@@ -25,6 +25,8 @@ const Modal = ({ item, onClose }) => {
                 <style>{`
                     @import url('https://fonts.cdnfonts.com/css/minecrafter');
                     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+                    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+                    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
                 `}</style>
 
                 {/* Hero Section of Modal */}
@@ -68,7 +70,9 @@ const Modal = ({ item, onClose }) => {
                                     ? "text-red-600 font-['Minecrafter'] text-5xl font-normal tracking-wide drop-shadow-md"
                                     : (item.title === "Museum AR/VR")
                                         ? "text-cyan-400 font-['Cinzel'] text-5xl font-bold tracking-widest drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
-                                        : "text-white"
+                                        : (item.title === "Nutribudget")
+                                            ? "text-green-600 font-['Oswald'] text-6xl tracking-wide [-webkit-text-stroke:0.5px_orange]"
+                                            : "text-white"
                                 }`}
                             style={{
                                 fontFamily: (item.title === "Jurassic Park Interactive")
@@ -77,10 +81,12 @@ const Modal = ({ item, onClose }) => {
                                         ? "'Minecrafter', sans-serif"
                                         : (item.title === "Museum AR/VR")
                                             ? "'Cinzel', serif"
-                                            : "inherit"
+                                            : (item.title === "Nutribudget")
+                                                ? "'Oswald', sans-serif"
+                                                : "inherit"
                             }}
                         >
-                            {item.title || item.name}
+                            {item.title === "Nutribudget" ? "NutriBudget" : (item.title || item.name)}
                         </h2>
                         <div className="flex space-x-3">
                             <button className="flex items-center px-6 py-1.5 bg-white text-black font-bold rounded hover:bg-opacity-80 transition">
