@@ -32,8 +32,8 @@ const Modal = ({ item, onClose }) => {
                 {/* Hero Section of Modal */}
                 <div className="relative h-[50vh] w-full bg-black overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent z-20 pointer-events-none" />
-                    <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#181818] to-transparent z-20 pointer-events-none" />
-                    <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-[#181818] to-transparent z-20 pointer-events-none" />
+                    <div className="absolute inset-y-0 left-0 w-96 bg-gradient-to-r from-[#181818] to-transparent z-20 pointer-events-none" />
+                    <div className="absolute inset-y-0 right-0 w-96 bg-gradient-to-l from-[#181818] to-transparent z-20 pointer-events-none" />
 
                     {/* Base Image Layer (Always visible as placeholder) */}
                     {(item.modalImage || item.image) ? (
