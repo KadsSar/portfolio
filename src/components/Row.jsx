@@ -64,16 +64,22 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName
                                     here are my projects
                                 </div>
                             )}
-                            {title === "Top Trending" && (
+                            {(typeof title === 'string' && title === "Top Trending") && (
                                 <div className="text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase mb-1">
                                     skills i have acquired
                                 </div>
                             )}
-                            {title === "Top picks for you" && (
+                            {React.isValidElement(title) && (
                                 <div className="text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase mb-1">
                                     my work experience
                                 </div>
                             )}
+                            {title === "Select Genre" && (
+                                <div className="text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase mb-1">
+                                    Know more about me
+                                </div>
+                            )}
+
                             <div className="flex items-center text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase">
                                 <span>Drag to next</span>
                                 <span className="ml-2 text-base">→</span>
