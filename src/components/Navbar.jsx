@@ -86,7 +86,7 @@ const Navbar = () => {
 
                         <ul className="hidden lg:flex space-x-6 text-sm font-light text-gray-300 ml-8">
                             <li className="hover:text-white cursor-pointer transition">Home</li>
-                            <li className="hover:text-white cursor-pointer transition">Projects</li>
+                            <li className="hover:text-white cursor-pointer transition">Bio</li>
                             <li className="hover:text-white cursor-pointer transition">Skills</li>
                             <li className="hover:text-white cursor-pointer transition">Experience</li>
                         </ul>
