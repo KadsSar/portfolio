@@ -67,8 +67,6 @@ const Navbar = () => {
 
                         {/* Bottom Info */}
                         <div className="absolute bottom-8 left-6 right-6 pt-6 border-t border-[#333] text-xs text-gray-500 text-center">
-                            <p>Version 1.0.0</p>
-                            <p className="mt-2">Designed by Antigravity</p>
                         </div>
                     </div>
                 </div>
