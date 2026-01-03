@@ -31,6 +31,16 @@ export const projects = [
         tags: ["Game Design", "Matter.js", "JavaScript", "Algorithms"]
     },
     {
+        id: 1,
+        title: "Nutribudget",
+        desc: "Price-aware nutrition planner using GroceryDB (nutrition + prices) with ML clustering, optimization, a Flask API, and a Next.js dashboard.",
+        image: "/assets/nutribudget_thumbnail.png",
+        videoPosition: "w-[135%] h-[135%] -top-[20%] -left-[17%]",
+        youtubeId: "09PROtSZ6is",
+        link: "https://nutribudget-web.vercel.app/",
+        tags: ["Next.js", "Flask", "ML", "Python"]
+    },
+    {
         id: 2,
         title: "Museum AR/VR",
         desc: "Coming Soon: A revolutionary mixed reality experience redefining spatial interaction.",
@@ -38,14 +48,6 @@ export const projects = [
         youtubeId: "3JTeDoyDd0Q",
         videoPosition: "w-[250%] h-[250%] -top-[25%] -left-[75%]",
         tags: ["Unity", "AR/VR", "C#"]
-    },
-    {
-        id: 1,
-        title: "Nutribudget",
-        desc: "Price-aware nutrition planner using GroceryDB (nutrition + prices) with ML clustering, optimization, a Flask API, and a Next.js dashboard.",
-        image: "/assets/nutribudget_thumbnail.png",
-        link: "https://github.com/KadsSar/nutribudget",
-        tags: ["Next.js", "Flask", "ML", "Python"]
     }
 ];
 
