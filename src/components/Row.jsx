@@ -58,9 +58,26 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName
                             {title}
                         </h2>
 
-                        <div className="relative z-10 flex items-center mt-2 text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase opacity-80">
-                            <span>Drag to next</span>
-                            <span className="ml-2 text-base">→</span>
+                        <div className="relative z-10 flex flex-col mt-2 opacity-80">
+                            {title === "Latest Releases" && (
+                                <div className="text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase mb-1">
+                                    here are my projects
+                                </div>
+                            )}
+                            {title === "Top Trending" && (
+                                <div className="text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase mb-1">
+                                    skills i have acquired
+                                </div>
+                            )}
+                            {title === "Top picks for you" && (
+                                <div className="text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase mb-1">
+                                    my work experience
+                                </div>
+                            )}
+                            <div className="flex items-center text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase">
+                                <span>Drag to next</span>
+                                <span className="ml-2 text-base">→</span>
+                            </div>
                         </div>
                     </div>
 
