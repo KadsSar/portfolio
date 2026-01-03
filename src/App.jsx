@@ -55,12 +55,14 @@ function App() {
         />
 
         {/* Select Genre (Background) */}
-        <Row
-          title="Select Genre"
-          items={genres}
-          onSelect={handleSelect}
-          className="!-mt-6 md:!-mt-14 lg:!-mt-18 xl:!-mt-24 relative z-10"
-        />
+        <div id="select-genre">
+          <Row
+            title="Select Genre"
+            items={genres}
+            onSelect={handleSelect}
+            className="!-mt-6 md:!-mt-14 lg:!-mt-18 xl:!-mt-24 relative z-10"
+          />
+        </div>
       </div>
 
       {/* Modal Overlay */}

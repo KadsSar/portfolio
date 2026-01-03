@@ -113,7 +113,15 @@ const Hero = () => {
                         Watch Now
                     </button>
 
-                    <button className="flex items-center px-6 py-2 bg-[rgba(109,109,110,0.7)] text-white font-bold rounded hover:bg-[rgba(109,109,110,0.4)] transition duration-300 backdrop-blur-sm">
+                    <button
+                        onClick={() => {
+                            const element = document.getElementById('select-genre');
+                            if (element) {
+                                element.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
+                        className="flex items-center px-6 py-2 bg-[rgba(109,109,110,0.7)] text-white font-bold rounded hover:bg-[rgba(109,109,110,0.4)] transition duration-300 backdrop-blur-sm"
+                    >
                         <Info className="w-5 h-5 mr-2" />
                         More Info
                     </button>

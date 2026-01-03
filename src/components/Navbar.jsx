@@ -21,6 +21,7 @@ const Navbar = () => {
     // Menu Options
     const menuItems = [
         { name: "About", icon: <Info size={20} />, link: "#" },
+        { name: "My Projects", icon: <FileText size={20} />, link: "#" },
         { name: "Experience", icon: <Briefcase size={20} />, link: "#" },
         { name: "Resume", icon: <FileText size={20} />, link: "#" },
         { name: "LinkedIn", icon: <Linkedin size={20} />, link: "https://linkedin.com", external: true },
