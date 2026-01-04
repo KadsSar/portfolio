@@ -88,7 +88,7 @@ const Navbar = () => {
                             <li className="hover:text-white cursor-pointer transition">Home</li>
                             <li className="hover:text-white cursor-pointer transition">Bio</li>
                             <li className="hover:text-white cursor-pointer transition">Skills</li>
-                            <li className="hover:text-white cursor-pointer transition">Experience</li>
+                            <li className="hover:text-white cursor-pointer transition">Leadership</li>
                         </ul>
                     </div>
 
