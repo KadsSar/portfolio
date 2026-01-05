@@ -88,7 +88,7 @@ const Hero = () => {
                         Portfolio
                     </span>
                 </div>
-                <h1 className="text-5xl md:text-8xl tracking-widest drop-shadow-[0_5px_5px_rgba(0,0,0,1)] animate-fade-in-up font-['Rubik_Distressed'] text-white uppercase leading-[0.8]">
+                <h1 className="text-3xl md:text-6xl tracking-widest drop-shadow-[0_5px_5px_rgba(0,0,0,1)] animate-fade-in-up font-['Rubik_Distressed'] text-white uppercase leading-[0.8]">
                     {userData.name.split(" ").map((word, i) => (
                         <span key={i} className="block">{word}</span>
                     ))}
