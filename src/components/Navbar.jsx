@@ -89,6 +89,7 @@ const Navbar = () => {
                             <li className="hover:text-white cursor-pointer transition">Bio</li>
                             <li className="hover:text-white cursor-pointer transition">Skills</li>
                             <li className="hover:text-white cursor-pointer transition">Leadership</li>
+                            <li className="hover:text-white cursor-pointer transition">LearnLab</li>
                         </ul>
                     </div>
 
