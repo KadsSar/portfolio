@@ -41,7 +41,7 @@ const Row = forwardRef(({ title, items, isLargeRow, onSelect, className = "", it
     }));
 
     return (
-        <div className={`space-y-2 md:px-12 px-4 mb-0 group ${className}`}>
+        <div className={`space-y-2 md:px-8 px-4 mb-0 group ${className}`}>
 
             <div className="relative group/row">
                 {/* Left Arrow */}

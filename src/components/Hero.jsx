@@ -73,7 +73,7 @@ const Hero = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col justify-center h-full px-4 md:px-12 w-full md:w-2/3 lg:w-1/2 space-y-6 pt-20">
+            <div className="relative z-10 flex flex-col justify-center h-full px-4 md:px-8 w-full md:w-2/3 lg:w-1/2 space-y-6 pt-20">
                 {/* Netflix-style 'Portfolio' Label */}
                 <div className="flex items-center space-x-3 mb-[-5px] mt-2 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                     <svg width="15" height="27" viewBox="0 0 30 54" className="drop-shadow-md">
@@ -88,7 +88,7 @@ const Hero = () => {
                         Portfolio
                     </span>
                 </div>
-                <h1 className="text-3xl md:text-6xl tracking-widest drop-shadow-[0_5px_5px_rgba(0,0,0,1)] animate-fade-in-up font-['Rubik_Distressed'] text-white uppercase leading-[0.8]">
+                <h1 className="text-4xl md:text-7xl tracking-widest drop-shadow-[0_5px_5px_rgba(0,0,0,1)] animate-fade-in-up font-['Rubik_Distressed'] text-white uppercase leading-[0.8]">
                     {userData.name.split(" ").map((word, i) => (
                         <span key={i} className="block">{word}</span>
                     ))}

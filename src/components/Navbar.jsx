@@ -25,7 +25,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick }) => {
         { name: "Experience", icon: <Briefcase size={20} />, link: "#" },
         { name: "Resume", icon: <FileText size={20} />, link: "#" },
         { name: "LinkedIn", icon: <Linkedin size={20} />, link: "https://www.linkedin.com/in/sarisha-kadakia", external: true },
-        { name: "Github", icon: <Github size={20} />, link: "https://github.com/KadsSar", external: true },
+        { name: "Github", icon: <Github size={20} />, link: "https://github.com/KadsSar?tab=overview&from=2026-01-01&to=2026-01-05", external: true },
     ];
 
     return (
@@ -74,7 +74,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick }) => {
             </div>
 
             <nav className={`fixed top-0 w-full z-50 transition-colors duration-300 ${isScrolled ? 'bg-netflix-black bg-opacity-95' : 'bg-gradient-to-b from-black/80 to-transparent'}`}>
-                <div className="flex items-center justify-between px-4 md:px-12 py-4">
+                <div className="flex items-center justify-between px-4 md:px-8 py-4">
                     {/* Left Section: Menu + Logo */}
                     <div className="flex items-center">
                         {/* Hamburger Icon */}
