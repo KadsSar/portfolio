@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Row from './components/Row';
@@ -11,6 +11,33 @@ import Background3D from './components/Background3D';
 
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
+  const selectGenreRef = useRef(null);
+  const topTrendingRef = useRef(null);
+
+  const handleSkillsClick = () => {
+    // 1. Scroll page to section
+    document.getElementById('skills-section')?.scrollIntoView({ behavior: 'smooth' });
+
+    // 2. Scroll the row to the 1st item (index 0) - Rank 1
+    if (topTrendingRef.current) {
+      setTimeout(() => {
+        topTrendingRef.current.scrollToIndex(0);
+      }, 500);
+    }
+  };
+
+  const handleLeadershipClick = () => {
+    // 1. Scroll page to section
+    document.getElementById('select-genre')?.scrollIntoView({ behavior: 'smooth' });
+
+    // 2. Scroll the row to the 4th item (index 3) - Leadership
+    if (selectGenreRef.current) {
+      setTimeout(() => {
+        selectGenreRef.current.scrollToIndex(3);
+      }, 500); // Small delay to allow page scroll to start/settle
+    }
+  };
+
 
   const handleSelect = (item) => {
     setSelectedItem(item);
@@ -24,7 +51,10 @@ function App() {
     <div className="relative min-h-screen overflow-x-hidden">
       {/* 3D Background Layer */}
       <Background3D />
-      <Navbar />
+      <Navbar
+        onLeadershipClick={handleLeadershipClick}
+        onSkillsClick={handleSkillsClick}
+      />
 
       <Hero />
 
@@ -37,13 +67,17 @@ function App() {
         />
 
         {/* Top Trending Skills Row */}
-        <Row
-          title="Top Trending"
-          items={skills}
-          isLargeRow={true}
-          onSelect={handleSelect}
-          className="!-mt-4 md:!-mt-10 lg:!-mt-12 xl:!-mt-16 relative z-30"
-        />
+        {/* Top Trending Skills Row */}
+        <div id="skills-section">
+          <Row
+            ref={topTrendingRef}
+            title="Top Trending"
+            items={skills}
+            isLargeRow={true}
+            onSelect={handleSelect}
+            className="!-mt-4 md:!-mt-10 lg:!-mt-12 xl:!-mt-16 relative z-30"
+          />
+        </div>
 
         {/* Top Picks for You (Experience) */}
         <Row
@@ -58,6 +92,7 @@ function App() {
         <div id="select-genre">
           <Row
             title="Select Genre"
+            ref={selectGenreRef}
             items={genres}
             onSelect={handleSelect}
             className="!-mt-6 md:!-mt-14 lg:!-mt-18 xl:!-mt-24 relative z-10"

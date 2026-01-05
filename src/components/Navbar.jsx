@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Bell, Search, User, Menu, X, Github, Linkedin, Briefcase, Info, FileText, CircleUser } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ onLeadershipClick, onSkillsClick }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -87,8 +87,8 @@ const Navbar = () => {
                         <ul className="hidden lg:flex space-x-6 text-sm font-light text-gray-300 ml-8">
                             <li className="hover:text-white cursor-pointer transition">Home</li>
                             <li className="hover:text-white cursor-pointer transition">Bio</li>
-                            <li className="hover:text-white cursor-pointer transition">Skills</li>
-                            <li className="hover:text-white cursor-pointer transition">Leadership</li>
+                            <li className="hover:text-white cursor-pointer transition" onClick={onSkillsClick}>Skills</li>
+                            <li className="hover:text-white cursor-pointer transition" onClick={onLeadershipClick}>Leadership</li>
                             <li className="hover:text-white cursor-pointer transition">LearnLab</li>
                         </ul>
                     </div>

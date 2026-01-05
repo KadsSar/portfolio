@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, forwardRef, useImperativeHandle } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName = "", titleBackgroundImage = null }) => {
+const Row = forwardRef(({ title, items, isLargeRow, onSelect, className = "", itemClassName = "", titleBackgroundImage = null }, ref) => {
     const rowRef = useRef(null);
     const [isMoved, setIsMoved] = useState(false);
 
@@ -18,6 +18,27 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName
             rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
         }
     };
+
+    useImperativeHandle(ref, () => ({
+        scrollToIndex: (index) => {
+            if (rowRef.current) {
+                const container = rowRef.current;
+                // +1 because the first child is the Title Card
+                const targetNode = container.children[index + 1];
+                if (targetNode) {
+                    // Calculate position relative to the container
+                    // We subtract container.offsetLeft to get the position inside the container
+                    // regardless of where the container is on the screen
+                    const scrollLeft = targetNode.offsetLeft - container.offsetLeft;
+
+                    container.scrollTo({
+                        left: scrollLeft,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }
+    }));
 
     return (
         <div className={`space-y-2 md:px-12 px-4 mb-0 group ${className}`}>
@@ -181,6 +202,6 @@ const Row = ({ title, items, isLargeRow, onSelect, className = "", itemClassName
             </div>
         </div>
     );
-};
+});
 
 export default Row;
