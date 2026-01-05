@@ -13,6 +13,16 @@ function App() {
   const [selectedItem, setSelectedItem] = useState(null);
   const selectGenreRef = useRef(null);
   const topTrendingRef = useRef(null);
+  const projectsRef = useRef(null);
+
+  const handleProjectsClick = () => {
+    document.getElementById('latest-releases')?.scrollIntoView({ behavior: 'smooth' });
+    if (projectsRef.current) {
+      setTimeout(() => {
+        projectsRef.current.scrollToIndex(0); // Jurassic Park is at index 0
+      }, 500);
+    }
+  };
 
   const handleSkillsClick = () => {
     // 1. Scroll page to section
@@ -54,17 +64,21 @@ function App() {
       <Navbar
         onLeadershipClick={handleLeadershipClick}
         onSkillsClick={handleSkillsClick}
+        onProjectsClick={handleProjectsClick}
       />
 
       <Hero />
 
       <div className="relative z-20 -mt-2 md:-mt-4 pl-4 md:pl-8 xl:pl-12 pb-12 space-y-2">
         {/* Projects Row */}
-        <Row
-          title="Latest Releases"
-          items={projects}
-          onSelect={handleSelect}
-        />
+        <div id="latest-releases">
+          <Row
+            ref={projectsRef}
+            title="Latest Releases"
+            items={projects}
+            onSelect={handleSelect}
+          />
+        </div>
 
         {/* Top Trending Skills Row */}
         {/* Top Trending Skills Row */}
