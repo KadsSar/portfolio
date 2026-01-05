@@ -24,7 +24,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick }) => {
         { name: "My Projects", icon: <FileText size={20} />, link: "#" },
         { name: "Experience", icon: <Briefcase size={20} />, link: "#" },
         { name: "Resume", icon: <FileText size={20} />, link: "#" },
-        { name: "LinkedIn", icon: <Linkedin size={20} />, link: "https://linkedin.com", external: true },
+        { name: "LinkedIn", icon: <Linkedin size={20} />, link: "https://www.linkedin.com/in/sarisha-kadakia", external: true },
         { name: "Github", icon: <Github size={20} />, link: "https://github.com/KadsSar", external: true },
     ];
 
