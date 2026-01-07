@@ -57,7 +57,7 @@ export const skills = [
     { id: 3, name: "JS, React, Three.js", rank: 3, image: "/assets/js_react_threejs_thumbnail.png" },
     { id: 4, name: "Java, Python", rank: 4, image: "/assets/java_python_thumbnail.png" },
     { id: 5, name: "AR/VR SDKs (ARKit, ARCore)", rank: 5, image: "/assets/ar_sdk_thumbnail.png" },
-    { id: 6, name: "Git & GitHub", rank: 6 },
+    { id: 6, name: "Git & GitHub", rank: 6, image: "/assets/git_github_thumbnail.png" },
     { id: 7, name: "SQL, Postgres, MySQL", rank: 7 },
     { id: 8, name: "Linear Algebra & Physics", rank: 8 },
     { id: 9, name: "Spatial UX/UI", rank: 9 },
