@@ -53,9 +53,9 @@ export const projects = [
 
 export const skills = [
     { id: 1, name: "Unity & AR Foundation", rank: 1, image: "/assets/unity_thumbnail.png" },
-    { id: 2, name: "C#, C++, C", rank: 2 },
-    { id: 3, name: "JS, React, Three.js", rank: 3 },
-    { id: 4, name: "Java, Python", rank: 4 },
+    { id: 2, name: "C#, C++, C", rank: 2, image: "/assets/c_cpp_thumbnail.png" },
+    { id: 3, name: "JS, React, Three.js", rank: 3, image: "/assets/js_react_threejs_thumbnail.png" },
+    { id: 4, name: "Java, Python", rank: 4, image: "/assets/java_python_thumbnail.png" },
     { id: 5, name: "AR/VR SDKs (ARKit, ARCore)", rank: 5 },
     { id: 6, name: "Git & GitHub", rank: 6 },
     { id: 7, name: "SQL, Postgres, MySQL", rank: 7 },
