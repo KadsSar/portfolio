@@ -52,7 +52,7 @@ export const projects = [
 ];
 
 export const skills = [
-    { id: 1, name: "Unity & AR Foundation", rank: 1 },
+    { id: 1, name: "Unity & AR Foundation", rank: 1, image: "/assets/unity_thumbnail.png" },
     { id: 2, name: "C#, C++, C", rank: 2 },
     { id: 3, name: "JS, React, Three.js", rank: 3 },
     { id: 4, name: "Java, Python", rank: 4 },
