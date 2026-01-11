@@ -23,7 +23,7 @@ function App() {
       }, 500);
     }
   };
-  //submitted changes to portfolio
+  //submitted changes to port
   const handleSkillsClick = () => {
     // 1. Scroll page to section
     document.getElementById('skills-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -46,7 +46,7 @@ function App() {
         selectGenreRef.current.scrollToIndex(3);
       }, 500); // Small delay to allow page scroll to start/settle
     }
-  };
+  };//row section completed
 
 
   const handleSelect = (item) => {
