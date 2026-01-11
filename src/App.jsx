@@ -23,7 +23,7 @@ function App() {
       }, 500);
     }
   };
-
+  //submitted changes to portfolio
   const handleSkillsClick = () => {
     // 1. Scroll page to section
     document.getElementById('skills-section')?.scrollIntoView({ behavior: 'smooth' });
