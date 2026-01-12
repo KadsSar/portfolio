@@ -15,7 +15,7 @@ const Modal = ({ item, onClose }) => {
             <div className="relative w-full max-w-4xl bg-[#181818] rounded-md shadow-2xl overflow-hidden animate-scale-up">
                 {/* Close Button */}
                 <button
-                    onClick={onClose}
+                    onClick={onClose}//adding buttons on one click
                     className="absolute top-4 right-4 z-50 w-8 h-8 rounded-full bg-[#181818] flex items-center justify-center hover:bg-white/20 transition"
                 >
                     <X className="w-5 h-5 text-white" />
