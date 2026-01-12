@@ -12,7 +12,7 @@ const Modal = ({ item, onClose }) => {
 
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fade-in">
-            <div className="relative w-full max-w-4xl bg-[#181818] rounded-md shadow-2xl overflow-hidden animate-scale-up">
+            <div className={`relative w-full ${item.details ? 'max-w-3xl' : 'max-w-4xl'} bg-[#181818] rounded-md shadow-2xl overflow-hidden animate-scale-up`}>
                 {/* Close Button */}
                 <button
                     onClick={onClose}//adding buttons on one click
@@ -30,7 +30,7 @@ const Modal = ({ item, onClose }) => {
                 `}</style>
 
                 {/* Hero Section of Modal */}
-                <div className="relative h-[50vh] w-full bg-black overflow-hidden">
+                <div className={`relative ${item.details ? 'h-[35vh]' : 'h-[50vh]'} w-full bg-black overflow-hidden`}>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent z-20 pointer-events-none" />
                     <div className="absolute inset-y-0 left-0 w-96 bg-gradient-to-r from-[#181818] to-transparent z-20 pointer-events-none" />
                     <div className="absolute inset-y-0 right-0 w-96 bg-gradient-to-l from-[#181818] to-transparent z-20 pointer-events-none" />

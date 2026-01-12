@@ -114,8 +114,8 @@ const Row = forwardRef(({ title, items, isLargeRow, onSelect, className = "", it
                             return (
                                 <div
                                     key={item.id || index}
-                                    className={`relative group/item min-w-[220px] md:min-w-[340px] h-[160px] md:h-[240px] flex items-center cursor-pointer mr-0 hover:z-50 ${itemClassName}`}
-                                    onClick={() => onSelect(item)}
+                                    className={`relative group/item min-w-[220px] md:min-w-[340px] h-[160px] md:h-[240px] flex items-center cursor-default mr-0 ${itemClassName}`}
+
                                 >
                                     {/* Big Number (Left side, ON TOP) */}
                                     {/* Z-Index: 20 -> Places number visually on top of the image */}
