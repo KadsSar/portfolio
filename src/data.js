@@ -87,7 +87,7 @@ export const genres = [
     {
         id: "education",
         title: "Education",
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
+        image: "/assets/education_thumbnail.png",
         details: [
             { title: "Brock University", subtitle: "BSc Computer Science (2024-2028)", desc: "Focusing on Spatial Computing and AI." },
             { title: "Lakshya Institute", subtitle: "High School (2020-2022)", desc: "Mumbai, India." }
@@ -96,7 +96,7 @@ export const genres = [
     {
         id: "toolkit",
         title: "My Toolkit",
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+        image: "/assets/toolkit_thumbnail_v2.png",
         details: [
             { title: "Languages", subtitle: "Python, Java, C++, C, JS", desc: "Core spatial and logic programming." },
             { title: "Web & Cloud", subtitle: "React, Next.js, AWS, Cloudflare", desc: "Full stack development." },
@@ -106,7 +106,7 @@ export const genres = [
     {
         id: "certifications",
         title: "Certifications",
-        image: "https://images.unsplash.com/photo-1570616969692-5476b5fdd109?w=800&q=80",
+        image: "/assets/certifications_thumbnail.png",
         details: [
             { title: "Oracle Cloud", subtitle: "Foundations Associate", desc: "Certified Dec 2025." }
         ]
@@ -114,7 +114,7 @@ export const genres = [
     {
         id: "hackathons",
         title: "Leadership",
-        image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80",
+        image: "/assets/leadership_thumbnail.png",
         details: [
             { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Upcoming competition." },
             { title: "Hackathon 2026", subtitle: "Jan 2026", desc: "Upcoming event." }
