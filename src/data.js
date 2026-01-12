@@ -58,10 +58,10 @@ export const skills = [
     { id: 4, name: "Java, Python", rank: 4, image: "/assets/java_python_thumbnail.png" },
     { id: 5, name: "AR/VR SDKs (ARKit, ARCore)", rank: 5, image: "/assets/ar_sdk_thumbnail.png" },
     { id: 6, name: "Git & GitHub", rank: 6, image: "/assets/git_github_thumbnail.png" },
-    { id: 7, name: "SQL, Postgres, MySQL", rank: 7 },
-    { id: 8, name: "Linear Algebra & Physics", rank: 8 },
-    { id: 9, name: "Spatial UX/UI", rank: 9 },
-    { id: 10, name: "OS (Linux, Windows, macOS)", rank: 10 },
+    { id: 7, name: "SQL, Postgres, MySQL", rank: 7, image: "/assets/sql_postgres_mysql_thumbnail.png" },
+    { id: 8, name: "Linear Algebra & Physics", rank: 8, image: "/assets/linear_algebra_physics_thumbnail.png" },
+    { id: 9, name: "Spatial UX/UI", rank: 9, image: "/assets/spatial_ux_ui_thumbnail.png" },
+    { id: 10, name: "OS (Linux, Windows, macOS)", rank: 10, image: "/assets/os_thumbnail.png" },
 ];
 
 export const experience = [
