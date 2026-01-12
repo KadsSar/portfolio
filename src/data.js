@@ -71,7 +71,7 @@ export const experience = [
         company: "PIONEER Engineering",
         duration: "2021 - 2023",
         desc: "Assisted in network configurations, troubleshooting hardware/software issues, and maintaining IT infrastructure for the Mumbai office.",
-        image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&q=80"
+        image: "/assets/it_intern_thumbnail.png"
     },
     {
         id: 2,
@@ -79,7 +79,7 @@ export const experience = [
         company: "Coming Soon",
         duration: "Future",
         desc: "Aspiring to build the next generation of spatial computing applications.",
-        image: "https://images.unsplash.com/photo-1531297420494-856551521140?w=800&q=80"
+        image: "/assets/software_engineer_thumbnail.png"
     }
 ];
 

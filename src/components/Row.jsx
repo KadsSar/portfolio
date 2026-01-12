@@ -167,7 +167,7 @@ const Row = forwardRef(({ title, items, isLargeRow, onSelect, className = "", it
                         return (
                             <div
                                 key={item.id || index}
-                                className={`relative min-w-[180px] md:min-w-[240px] cursor-pointer transition duration-300 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:z-50 group-hover/item:opacity-100 ${isLargeRow ? 'h-[280px] md:min-w-[400px]' : 'h-[140px]'} rounded-sm overflow-hidden ${itemClassName}`}
+                                className={`relative w-[180px] md:w-[240px] shrink-0 cursor-pointer transition duration-300 ease-out hover:scale-110 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:z-50 group-hover/item:opacity-100 ${isLargeRow ? 'h-[280px] md:w-[400px]' : 'h-[140px]'} rounded-sm overflow-hidden ${itemClassName}`}
                                 onClick={() => onSelect(item)}
                             >
                                 <div className="absolute inset-0 bg-[#2f2f2f] animate-pulse -z-10" />
