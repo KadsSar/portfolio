@@ -89,6 +89,7 @@ function App() {
             title="Latest Releases"
             items={projects}
             onSelect={handleSelect}
+            itemClassName="!w-[260px] !md:w-[340px] !h-[170px]"
           />
         </div>
 
