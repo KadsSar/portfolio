@@ -48,6 +48,18 @@ function App() {
     }
   };//row section completed
 
+  const handleContactClick = () => {
+    // 1. Scroll page to section
+    document.getElementById('select-genre')?.scrollIntoView({ behavior: 'smooth' });
+
+    // 2. Scroll the row to the 3rd item (index 2) - Contact Me
+    if (selectGenreRef.current) {
+      setTimeout(() => {
+        selectGenreRef.current.scrollToIndex(2);
+      }, 500);
+    }
+  };
+
 
   const handleSelect = (item) => {
     setSelectedItem(item);
@@ -67,7 +79,7 @@ function App() {
         onProjectsClick={handleProjectsClick}
       />
 
-      <Hero />
+      <Hero onContactClick={handleContactClick} />
 
       <div className="relative z-20 -mt-2 md:-mt-4 pl-4 md:pl-8 xl:pl-12 pb-12 space-y-2">
         {/* Projects Row */}

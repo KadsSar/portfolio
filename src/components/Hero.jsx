@@ -2,7 +2,7 @@ import React from 'react';
 import { Play, Info } from 'lucide-react';
 import { userData } from '../data';
 
-const Hero = () => {
+const Hero = ({ onContactClick }) => {
     return (
         <div className="relative h-[85vh] w-full text-white">
             {/* Background Image */}
@@ -99,7 +99,12 @@ const Hero = () => {
                     <span className="text-[#46d369]">98% Match</span>
                     <span>Resume</span>
                     <span className="text-gray-500">•</span>
-                    <span>Contact Information</span>
+                    <span
+                        onClick={onContactClick}
+                        className="cursor-pointer hover:text-white transition duration-300"
+                    >
+                        Contact Information
+                    </span>
                     <span className="border border-gray-500 px-2 text-xs rounded text-gray-400">HD</span>
                 </div>
 
