@@ -90,7 +90,7 @@ export const genres = [
         image: "/assets/education_thumbnail.png",
         details: [
             { title: "Brock University", subtitle: "BSc Computer Science (2024-2028)", desc: "Bachelor's in Computer Science (2024-2028)" },
-            { title: "Lakshya Institute", subtitle: "High School (2020-2022)", desc: "Excelled in PCM fields and pursued engineering " }
+            { title: "Lakshya Institute", subtitle: "High School (2020-2022)", desc: "Excelled in PCM fields and pursued engineering (2020-2022)" }
         ]
     },
     {
