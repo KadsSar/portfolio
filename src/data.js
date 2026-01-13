@@ -6,7 +6,7 @@ import { Code, BookOpen, Award, Users, Monitor, Terminal, Database, Cpu, Gamepad
 
 export const userData = {
     name: "Sarisha Kadakia", // Updated name
-    logline: "Aspiring Software Engineer | CS Major @ Brock University | Passionate about Full-Stack Development & System Architecture ",
+    logline: "Aspiring Software Engineer | CS Major @ Brock University | Passionate about Full-Stack Development & System Architecture | Actively exploring the future of interaction through 3D graphics and spatial programming",
     heroImage: "/hero-bg.jpg", // We need to handle the uploaded image. I'll assume it's placed in public/
 };
 
