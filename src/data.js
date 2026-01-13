@@ -6,7 +6,7 @@ import { Code, BookOpen, Award, Users, Monitor, Terminal, Database, Cpu, Gamepad
 
 export const userData = {
     name: "Sarisha Kadakia", // Updated name
-    logline: "Aspiring Software Engineer | CS Major @ Brock University | Passionate about Full-Stack Development & System Architecture | Actively exploring the future of interaction through 3D graphics and spatial programming",
+    logline: "Aspiring Software Engineer | CS Major @Brock University | Passionate about Full-Stack Development & System Architecture | Exploring the future of interaction through 3D graphics and spatial programming",
     heroImage: "/hero-bg.jpg", // We need to handle the uploaded image. I'll assume it's placed in public/
 };
 
@@ -89,8 +89,8 @@ export const genres = [
         title: "Education",
         image: "/assets/education_thumbnail.png",
         details: [
-            { title: "Brock University", subtitle: "BSc Computer Science (2024-2028)", desc: "Focusing on Spatial Computing and AI." },
-            { title: "Lakshya Institute", subtitle: "High School (2020-2022)", desc: "Mumbai, India." }
+            { title: "Brock University", subtitle: "BSc Computer Science (2024-2028)", desc: "Bachelor's in Computer Science (2024-2028)" },
+            { title: "Lakshya Institute", subtitle: "High School (2020-2022)", desc: "Excelled in PCM fields and pursued engineering " }
         ]
     },
     {
