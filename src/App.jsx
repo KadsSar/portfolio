@@ -43,7 +43,7 @@ function App() {
     // 2. Scroll the row to the 4th item (index 3) - Leadership
     if (selectGenreRef.current) {
       setTimeout(() => {
-        selectGenreRef.current.scrollToIndex(3);
+        selectGenreRef.current.scrollToIndex(4); // Updated index for Leadership
       }, 500); // Small delay to allow page scroll to start/settle
     }
   };//row section completed
