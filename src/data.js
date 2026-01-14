@@ -89,6 +89,7 @@ export const genres = [
         title: "Education",
         desc: "Currently pursuing a B.Sc in Computer Science at Brock University. I've been exploring this field since high school and expect to graduate in 2028.",
         image: "/assets/education_thumbnail.png",
+        youtubeId: "_pfE4FCAYZY",
         details: [
             { title: "Brock University", subtitle: "BSc Computer Science (2024-2028)", desc: "Bachelor's in Computer Science (2024-2028)" },
             { title: "Lakshya Institute", subtitle: "High School (2020-2022)", desc: "Excelled in PCM fields and pursued engineering (2020-2022)" },
