@@ -112,7 +112,7 @@ function App() {
           items={experience}
           onSelect={handleSelect}
           className="!-mt-2 md:!-mt-8 lg:!-mt-10 xl:!-mt-12 relative z-20 [&_.scrollbar-hide]:pt-20 md:[&_.scrollbar-hide]:pt-32"
-          itemClassName="-translate-y-8 md:-translate-y-16 hover:!-translate-y-10 md:hover:!-translate-y-20"
+          itemClassName="!w-[260px] !md:w-[340px] !h-[170px] -translate-y-8 md:-translate-y-16 hover:!-translate-y-10 md:hover:!-translate-y-20"
         />
 
         {/* Select Genre (Background) */}
@@ -123,6 +123,7 @@ function App() {
             items={genres}
             onSelect={handleSelect}
             className="!-mt-6 md:!-mt-14 lg:!-mt-18 xl:!-mt-24 relative z-10"
+            itemClassName="!w-[260px] !md:w-[340px] !h-[170px]"
           />
         </div>
       </div>
