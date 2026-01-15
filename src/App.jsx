@@ -60,6 +60,10 @@ function App() {
     }
   };
 
+  const handleExperienceClick = () => {
+    document.getElementById('experience-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
 
   const handleSelect = (item) => {
     setSelectedItem(item);
@@ -77,6 +81,7 @@ function App() {
         onLeadershipClick={handleLeadershipClick}
         onSkillsClick={handleSkillsClick}
         onProjectsClick={handleProjectsClick}
+        onExperienceClick={handleExperienceClick}
       />
 
       <Hero onContactClick={handleContactClick} />
@@ -107,13 +112,15 @@ function App() {
         </div>
 
         {/* Top Picks for You (Experience) */}
-        <Row
-          title={<>Top Picks<br />For You</>}
-          items={experience}
-          onSelect={handleSelect}
-          className="!-mt-2 md:!-mt-8 lg:!-mt-10 xl:!-mt-12 relative z-20 [&_.scrollbar-hide]:pt-20 md:[&_.scrollbar-hide]:pt-32"
-          itemClassName="!w-[260px] !md:w-[340px] !h-[170px] -translate-y-8 md:-translate-y-16 hover:!-translate-y-10 md:hover:!-translate-y-20"
-        />
+        <div id="experience-section">
+          <Row
+            title={<>Top Picks<br />For You</>}
+            items={experience}
+            onSelect={handleSelect}
+            className="!-mt-2 md:!-mt-8 lg:!-mt-10 xl:!-mt-12 relative z-20 [&_.scrollbar-hide]:pt-20 md:[&_.scrollbar-hide]:pt-32"
+            itemClassName="!w-[260px] !md:w-[340px] !h-[170px] -translate-y-8 md:-translate-y-16 hover:!-translate-y-10 md:hover:!-translate-y-20"
+          />
+        </div>
 
         {/* Select Genre (Background) */}
         <div id="select-genre">

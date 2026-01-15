@@ -127,6 +127,7 @@ export const genres = [
         id: "hackathons",
         title: "Leadership",
         image: "/assets/leadership_thumbnail.png",
+        imgClassName: "object-[40%_center]",
         details: [
             { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Upcoming competition." },
             { title: "Hackathon 2026", subtitle: "Jan 2026", desc: "Upcoming event." }

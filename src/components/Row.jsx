@@ -177,7 +177,7 @@ const Row = forwardRef(({ title, items, isLargeRow, onSelect, className = "", it
                                     <img
                                         src={item.image}
                                         alt={item.title || item.name}
-                                        className="rounded-sm object-cover md:rounded w-full h-full"
+                                        className={`rounded-sm object-cover md:rounded w-full h-full ${item.imgClassName || ''}`}
                                     />
                                 ) : (
                                     <div className="w-full h-full bg-[#333] flex items-center justify-center">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Bell, Search, User, Menu, X, Github, Linkedin, Briefcase, Info, FileText, CircleUser } from 'lucide-react';
 
-const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick }) => {
+const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienceClick }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -22,7 +22,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick }) => {
     const menuItems = [
         { name: "About", icon: <Info size={20} />, link: "#" },
         { name: "My Projects", icon: <FileText size={20} />, link: "#", action: "projects" },
-        { name: "Experience", icon: <Briefcase size={20} />, link: "#" },
+        { name: "Experience", icon: <Briefcase size={20} />, link: "#", action: "experience" },
         { name: "Resume", icon: <FileText size={20} />, link: "#" },
         { name: "LinkedIn", icon: <Linkedin size={20} />, link: "https://www.linkedin.com/in/sarisha-kadakia", external: true },
         { name: "Github", icon: <Github size={20} />, link: "https://github.com/KadsSar", external: true },
@@ -58,6 +58,8 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick }) => {
                                     onClick={() => {
                                         if (item.action === "projects" && onProjectsClick) {
                                             onProjectsClick();
+                                        } else if (item.action === "experience" && onExperienceClick) {
+                                            onExperienceClick();
                                         } else if (item.external) {
                                             window.open(item.link, '_blank');
                                         }
