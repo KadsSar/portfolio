@@ -140,7 +140,7 @@ function App() {
             ref={selectGenreRef}
             items={genres}
             onSelect={handleSelect}
-            className="!-mt-6 md:!-mt-14 lg:!-mt-18 xl:!-mt-24 relative z-10"
+            className="!-mt-4 md:!-mt-10 lg:!-mt-14 xl:!-mt-20 relative z-10"
             itemClassName="!w-[260px] !md:w-[340px] !h-[170px]"
           />
         </div>

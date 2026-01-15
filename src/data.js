@@ -106,31 +106,32 @@ export const genres = [
             { title: "Tools", subtitle: "Figma, PowerBI, Wireshark, Git", desc: "Design and analysis." }
         ]
     },
-    id: "contact",
-    title: "Contact Me",
-    image: "/assets/contact_me_thumbnail.png",
-    imgClassName: "scale-105",
-    details: [
-        { title: "Email", subtitle: "sarisha.kadakia@example.com", desc: "Let's connect!" },
-        { title: "LinkedIn", subtitle: "Sarisha Kadakia", desc: "View my professional profile." }
-    ]
+    {
+        id: "contact",
+        title: "Contact Me",
+        image: "/assets/contact_me_thumbnail.png",
+        imgClassName: "object-fill",
+        details: [
+            { title: "Email", subtitle: "sarisha.kadakia@example.com", desc: "Let's connect!" },
+            { title: "LinkedIn", subtitle: "Sarisha Kadakia", desc: "View my professional profile." }
+        ]
     },
-{
-    id: "certifications",
+    {
+        id: "certifications",
         title: "Certifications",
-            image: "/assets/certifications_thumbnail.png",
-                details: [
-                    { title: "Oracle Cloud", subtitle: "Foundations Associate", desc: "Certified Dec 2025." }
-                ]
-},
-{
-    id: "hackathons",
+        image: "/assets/certifications_thumbnail.png",
+        details: [
+            { title: "Oracle Cloud", subtitle: "Foundations Associate", desc: "Certified Dec 2025." }
+        ]
+    },
+    {
+        id: "hackathons",
         title: "Leadership",
-            image: "/assets/leadership_thumbnail.png",
-                imgClassName: "object-[40%_center]",
-                    details: [
-                        { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Upcoming competition." },
-                        { title: "Hackathon 2026", subtitle: "Jan 2026", desc: "Upcoming event." }
-                    ]
-}
+        image: "/assets/leadership_thumbnail.png",
+        imgClassName: "object-[40%_center]",
+        details: [
+            { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Upcoming competition." },
+            { title: "Hackathon 2026", subtitle: "Jan 2026", desc: "Upcoming event." }
+        ]
+    }
 ];
