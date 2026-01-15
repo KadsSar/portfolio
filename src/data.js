@@ -100,6 +100,8 @@ export const genres = [
         id: "toolkit",
         title: "My Toolkit",
         image: "/assets/toolkit_thumbnail_v2.png",
+        youtubeId: "HAceoquch1c",
+        videoPosition: "w-[250%] h-[250%] -top-[25%] -left-[75%]",
         details: [
             { title: "Languages", subtitle: "Python, Java, C++, C, JS", desc: "Core spatial and logic programming." },
             { title: "Web & Cloud", subtitle: "React, Next.js, AWS, Cloudflare", desc: "Full stack development." },
