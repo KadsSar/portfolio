@@ -16,7 +16,18 @@ function App() {
   const projectsRef = useRef(null);
 
   const handleProjectsClick = () => {
-    document.getElementById('latest-releases')?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById('latest-releases');
+    if (element) {
+      const offset = 100; // Adjust this value to control how much "up" it scrolls
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+
     if (projectsRef.current) {
       setTimeout(() => {
         projectsRef.current.scrollToIndex(0); // Jurassic Park is at index 0
