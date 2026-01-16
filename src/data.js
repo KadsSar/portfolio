@@ -113,6 +113,8 @@ export const genres = [
         title: "Contact Me",
         image: "/assets/contact_me_thumbnail.png",
         imgClassName: "object-fill",
+        youtubeId: "t36N2gwixrc",
+        videoPosition: "w-[250%] h-[250%] -top-[40%] -left-[75%]",
         details: [
             { title: "Email", subtitle: "sarisha.kadakia@example.com", desc: "Let's connect!" },
             { title: "LinkedIn", subtitle: "Sarisha Kadakia", desc: "View my professional profile." }
