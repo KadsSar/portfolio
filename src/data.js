@@ -124,6 +124,7 @@ export const genres = [
         id: "certifications",
         title: "Certifications",
         image: "/assets/certifications_thumbnail.png",
+        youtubeId: "9H358fsshRM",
         details: [
             { title: "Oracle Cloud", subtitle: "Foundations Associate", desc: "Certified Dec 2025." }
         ]
@@ -133,6 +134,8 @@ export const genres = [
         title: "Leadership",
         image: "/assets/leadership_thumbnail.png",
         imgClassName: "object-[40%_center]",
+        youtubeId: "R2qu_j6GAG8",
+        videoEnd: 15,
         details: [
             { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Upcoming competition." },
             { title: "Hackathon 2026", subtitle: "Jan 2026", desc: "Upcoming event." }
