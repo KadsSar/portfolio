@@ -136,6 +136,7 @@ export const genres = [
         imgClassName: "object-[40%_center]",
         youtubeId: "R2qu_j6GAG8",
         videoEnd: 15,
+        videoPosition: "w-[250%] h-[250%] -top-[15%] -left-[35%]",
         details: [
             { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Upcoming competition." },
             { title: "Hackathon 2026", subtitle: "Jan 2026", desc: "Upcoming event." }
