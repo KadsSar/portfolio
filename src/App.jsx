@@ -156,7 +156,7 @@ function App() {
 
       {/* Footer / Copyright */}
       <footer className="py-8 text-center text-gray-500 text-sm">
-        <p>© 2026 Netflix Portfolio Clone. Built with React & Tailwind.</p>
+        <p> All copyrights reserved by Sarisha Kadakia © 2026</p>
       </footer>
     </div>
   );
