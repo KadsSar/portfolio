@@ -102,7 +102,7 @@ const Modal = ({ item, onClose }) => {
                             </button>
                             <button
                                 onClick={() => setIsLiked(!isLiked)}
-                                className={`flex items-center justify-center w-10 h-10 border-2 rounded-full transition-all duration-700 ease-in-out ${isLiked ? 'border-white rotate-[360deg]' : 'border-gray-500 hover:border-white'}`}
+                                className={`flex items-center justify-center w-10 h-10 border-2 rounded-full transition-all duration-700 ease-in-out ${isLiked ? 'border-green-500 rotate-[360deg]' : 'border-gray-500 hover:border-white'}`}
                             >
                                 <ThumbsUp className={`w-5 h-5 transition-colors duration-700 ${isLiked ? 'text-green-500 fill-green-500' : 'text-gray-300'}`} />
                             </button>
