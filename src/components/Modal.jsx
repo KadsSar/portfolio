@@ -110,7 +110,7 @@ const Modal = ({ item, onClose }) => {
                     <div className="md:col-span-2 space-y-4">
                         <div className="flex items-center space-x-4 text-green-400 font-semibold">
                             <span>98% Match</span>
-                            <span className="text-gray-400">{item.duration || "2024"}</span>
+                            <span className="text-gray-400">{item.duration || "2026"}</span>
                             <span className="border border-gray-500 px-2 rounded text-xs text-white">HD</span>
                         </div>
 
@@ -138,7 +138,7 @@ const Modal = ({ item, onClose }) => {
 
                     <div className="space-y-4 text-sm text-gray-400">
                         <div>
-                            <span className="text-gray-500">Tags/Tech:{item.id === 'education' ? ' Education history' : (item.id === 'toolkit' ? ' Tech toolkit' : (item.id === 'contact' ? ' Reach me here' : ''))}</span>
+                            <span className="text-gray-500">Tags/Tech:{item.id === 'education' ? ' Education history' : (item.id === 'toolkit' ? ' Tech toolkit' : (item.id === 'contact' ? ' Reach me here' : (item.id === 'certifications' ? ' Examinations' : '')))}</span>
                             <div className="flex flex-wrap gap-2 mt-1">
                                 {item.tags?.map(tag => (
                                     <span key={tag} className="text-white hover:underline cursor-pointer">{tag}, </span>

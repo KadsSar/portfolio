@@ -131,8 +131,9 @@ export const genres = [
         title: "Certifications",
         image: "/assets/certifications_thumbnail.png",
         youtubeId: "9H358fsshRM",
+        desc: "Continuously expanding my technical horizons through certification, with a dedicated focus on mastering modern cloud, data, and security standards.",
         details: [
-            { title: "Oracle Cloud", subtitle: "Foundations Associate", desc: "Certified Dec 2025." }
+            { title: "Oracle Cloud", subtitle: "Foundations Associate", desc: "Certified Dec 2025.", link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=624F66C17942490A2074EACF30540BB92C693B65694A40507E9274B367865F4F" }
         ]
     },
     {
