@@ -106,7 +106,8 @@ export const genres = [
             { title: "Languages and core", subtitle: "Python, Java, C++, C, JS", desc: "Python, Java, C++, C, JavaScript, HTML5, CSS3, R" },
             { title: "Cloud & Infrastructure", subtitle: "AWS, Docker, Vercel, Linux", desc: "AWS (Amazon Web Services), Docker, Vercel, Cloudflare, Linux, Git, GitHub" },
             { title: "Web", subtitle: "React, Next.js, AWS, Cloudflare", desc: "Full stack development," },
-            { title: "Tools", subtitle: "Figma, PowerBI, Wireshark, Git", desc: "Git, GitHub, VS Code, Linux, Postman, Scikit-learn" }
+            { title: "Tools", subtitle: "Figma, PowerBI, Wireshark, Git", desc: "Git, GitHub, VS Code, Linux, Postman, Scikit-learn" },
+            { title: "Databases", subtitle: "PostgreSQL, MongoDB, MySQL", desc: "PostgreSQL, MongoDB, MySQL, Postman, VS Code (Visual Studio Code)" }
         ]
     },
     {
