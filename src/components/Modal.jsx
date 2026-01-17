@@ -119,7 +119,7 @@ const Modal = ({ item, onClose }) => {
                         </p>
 
                         {item.details && (
-                            <ul className="mt-4 space-y-2 max-h-[300px] overflow-y-auto pr-2 no-scrollbar">
+                            <ul className="mt-4 space-y-2 max-h-[250px] overflow-y-auto pr-2 no-scrollbar">
                                 {item.details.map((detail, idx) => (
                                     <li key={idx} className="bg-[#2f2f2f] p-3 rounded">
                                         <h4 className="text-white font-bold">{detail.title || detail.subtitle}</h4>

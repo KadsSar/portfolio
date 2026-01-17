@@ -119,8 +119,10 @@ export const genres = [
         youtubeId: "t36N2gwixrc",
         videoPosition: "w-[250%] h-[250%] -top-[40%] -left-[75%]",
         details: [
-            { title: "Email", subtitle: "sarisha.kadakia@example.com", desc: "Let's connect!" },
-            { title: "LinkedIn", subtitle: "Sarisha Kadakia", desc: "View my professional profile." }
+            { title: "Email information", subtitle: "sarisha.kadakia@example.com", desc: "Let's connect!" },
+            { title: "Contact number", subtitle: "+1 (555) 000-0000", desc: "Available for opportunities." },
+            { title: "LinkedIn", subtitle: "Sarisha Kadakia", desc: "View my professional profile." },
+            { title: "GitHub profile", subtitle: "github.com/KadsSar", desc: "Check out my repositories." }
         ]
     },
     {
