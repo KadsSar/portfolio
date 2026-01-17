@@ -103,9 +103,10 @@ export const genres = [
         youtubeId: "HAceoquch1c",
         videoPosition: "w-[250%] h-[250%] -top-[60%] -left-[75%]",
         details: [
-            { title: "Languages", subtitle: "Python, Java, C++, C, JS", desc: "Core spatial and logic programming." },
-            { title: "Web & Cloud", subtitle: "React, Next.js, AWS, Cloudflare", desc: "Full stack development." },
-            { title: "Tools", subtitle: "Figma, PowerBI, Wireshark, Git", desc: "Design and analysis." }
+            { title: "Languages and core", subtitle: "Python, Java, C++, C, JS", desc: "Python, Java, C++, C, JavaScript, HTML5, CSS3, R" },
+            { title: "Cloud & Infrastructure", subtitle: "AWS, Docker, Vercel, Linux", desc: "AWS (Amazon Web Services), Docker, Vercel, Cloudflare, Linux, Git, GitHub" },
+            { title: "Web", subtitle: "React, Next.js, AWS, Cloudflare", desc: "Full stack development," },
+            { title: "Tools", subtitle: "Figma, PowerBI, Wireshark, Git", desc: "Git, GitHub, VS Code, Linux, Postman, Scikit-learn" }
         ]
     },
     {
