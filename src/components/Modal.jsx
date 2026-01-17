@@ -119,18 +119,18 @@ const Modal = ({ item, onClose }) => {
                         </p>
 
                         {item.details && (
-                            <ul className="mt-4 space-y-2 max-h-[250px] overflow-y-auto pr-2 no-scrollbar">
+                            <ul className="mt-4 space-y-3 max-h-[350px] overflow-y-auto pr-2 no-scrollbar">
                                 {item.details.map((detail, idx) => (
                                     <li key={idx} className={`bg-[#2f2f2f] rounded hover:bg-[#383838] transition duration-200 ${detail.link ? 'cursor-pointer' : ''}`}>
                                         {detail.link ? (
-                                            <a href={detail.link} target="_blank" rel="noopener noreferrer" className="block p-3 w-full h-full">
-                                                <h4 className="text-white font-bold">{detail.title || detail.subtitle}</h4>
-                                                <p className="text-blue-400 text-sm hover:underline whitespace-pre-line block mt-1">{detail.desc}</p>
+                                            <a href={detail.link} target="_blank" rel="noopener noreferrer" className="block p-5 w-full h-full">
+                                                <h4 className="text-white font-bold text-lg">{detail.title || detail.subtitle}</h4>
+                                                <p className="text-blue-400 text-sm hover:underline whitespace-pre-line block mt-2">{detail.desc}</p>
                                             </a>
                                         ) : (
-                                            <div className="p-3 w-full h-full">
-                                                <h4 className="text-white font-bold">{detail.title || detail.subtitle}</h4>
-                                                <p className="text-gray-400 text-sm whitespace-pre-line mt-1">{detail.desc}</p>
+                                            <div className="p-5 w-full h-full">
+                                                <h4 className="text-white font-bold text-lg">{detail.title || detail.subtitle}</h4>
+                                                <p className="text-gray-400 text-sm whitespace-pre-line mt-2">{detail.desc}</p>
                                             </div>
                                         )}
                                     </li>
