@@ -146,8 +146,11 @@ export const genres = [
         videoPosition: "w-[250%] h-[250%] -top-[15%] -left-[45%]",
         desc: "Active participant in the developer ecosystem, leveraging teamwork and technical curiosity to solve problems in competitive and collaborative environments.",
         details: [
+            { title: "Volunteer at Brock robotics Event", subtitle: "Volunteer", desc: "Supporting robotics competition." },
             { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Upcoming competition." },
-            { title: "Hackathon 2026", subtitle: "Jan 2026", desc: "Upcoming event." }
+            { title: "Hackathon 2026", subtitle: "Jan 2026", desc: "Upcoming event." },
+            { title: "Head volunteer at PAWS NGO", subtitle: "Volunteer", desc: "Leading volunteer initiatives." },
+            { title: "Treasurer at Brock SSA club", subtitle: "Treasurer", desc: "Managing finances and budget." }
         ]
     }
 ];
