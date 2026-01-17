@@ -148,7 +148,7 @@ export const genres = [
         details: [
             { title: "Volunteer at 2026 BrockU Robotics Competition", subtitle: "Volunteer", desc: "Mentor for teams, event coordinator" },
             { title: "HackVille 2026", subtitle: "Jan 2026", desc: "Developed an app within 24 hours using Python and Flask." },
-            { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Upcoming competition." },
+            { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Collaborated with a team to implement real time data tracking and analysis using Python and Scikit-learn." },
             { title: "Head volunteer at PAWS NGO", subtitle: "Volunteer", desc: "Leading volunteer initiatives." },
             { title: "Treasurer at Brock SSA club", subtitle: "Treasurer", desc: "Managing finances and budget." }
         ]
