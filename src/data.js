@@ -118,6 +118,7 @@ export const genres = [
         imgClassName: "object-fill",
         youtubeId: "t36N2gwixrc",
         videoPosition: "w-[250%] h-[250%] -top-[40%] -left-[75%]",
+        desc: "Always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a specific role in mind or just want to chat about tech, feel free to reach out.",
         details: [
             { title: "Email information", subtitle: "sarishakadakia16@gmail.com", desc: "Sarishakadakia16@gmail.com\ntn24yv@brocku.ca" },
             { title: "Contact number", subtitle: "+1 647-979-1604", desc: "+1 647-979-1604" },

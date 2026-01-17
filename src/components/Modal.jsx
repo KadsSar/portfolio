@@ -138,7 +138,7 @@ const Modal = ({ item, onClose }) => {
 
                     <div className="space-y-4 text-sm text-gray-400">
                         <div>
-                            <span className="text-gray-500">Tags/Tech:{item.id === 'education' ? ' Education history' : ''}</span>
+                            <span className="text-gray-500">Tags/Tech:{item.id === 'education' ? ' Education history' : (item.id === 'toolkit' ? ' Tech toolkit' : (item.id === 'contact' ? ' Reach me here' : ''))}</span>
                             <div className="flex flex-wrap gap-2 mt-1">
                                 {item.tags?.map(tag => (
                                     <span key={tag} className="text-white hover:underline cursor-pointer">{tag}, </span>
