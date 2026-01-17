@@ -119,10 +119,10 @@ export const genres = [
         youtubeId: "t36N2gwixrc",
         videoPosition: "w-[250%] h-[250%] -top-[40%] -left-[75%]",
         details: [
-            { title: "Email information", subtitle: "Sarishakadakia16@gmail.com", desc: "Sarishakadakia16@gmail.com\ntn24yv@brocku.ca" },
-            { title: "Contact number", subtitle: "+1 (555) 000-0000", desc: "Available for opportunities." },
-            { title: "LinkedIn", subtitle: "Sarisha Kadakia", desc: "View my professional profile." },
-            { title: "GitHub profile", subtitle: "github.com/KadsSar", desc: "Check out my repositories." }
+            { title: "Email information", subtitle: "sarishakadakia16@gmail.com", desc: "Sarishakadakia16@gmail.com\ntn24yv@brocku.ca" },
+            { title: "Contact number", subtitle: "+1 647-979-1604", desc: "+1 647-979-1604" },
+            { title: "LinkedIn", subtitle: "Sarisha Kadakia", desc: "www.linkedin.com/in/sarisha-kadakia", link: "https://www.linkedin.com/in/sarisha-kadakia" },
+            { title: "GitHub profile", subtitle: "github.com/KadsSar", desc: "https://github.com/KadsSar", link: "https://github.com/KadsSar" }
         ]
     },
     {

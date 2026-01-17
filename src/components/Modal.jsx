@@ -123,7 +123,13 @@ const Modal = ({ item, onClose }) => {
                                 {item.details.map((detail, idx) => (
                                     <li key={idx} className="bg-[#2f2f2f] p-3 rounded">
                                         <h4 className="text-white font-bold">{detail.title || detail.subtitle}</h4>
-                                        <p className="text-gray-400 text-sm whitespace-pre-line">{detail.desc}</p>
+                                        {detail.link ? (
+                                            <a href={detail.link} target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm hover:underline whitespace-pre-line block">
+                                                {detail.desc}
+                                            </a>
+                                        ) : (
+                                            <p className="text-gray-400 text-sm whitespace-pre-line">{detail.desc}</p>
+                                        )}
                                     </li>
                                 ))}
                             </ul>
