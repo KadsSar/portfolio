@@ -119,7 +119,7 @@ const Modal = ({ item, onClose }) => {
                         </p>
 
                         {item.details && (
-                            <ul className="mt-4 space-y-3 max-h-[350px] overflow-y-auto pr-2 no-scrollbar">
+                            <ul className="mt-4 space-y-3 max-h-[250px] overflow-y-auto pr-2 no-scrollbar">
                                 {item.details.map((detail, idx) => (
                                     <li key={idx} className={`bg-[#2f2f2f] rounded hover:bg-[#383838] transition duration-200 ${detail.link ? 'cursor-pointer' : ''}`}>
                                         {detail.link ? (
