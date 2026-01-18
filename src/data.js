@@ -67,10 +67,10 @@ export const skills = [
 export const experience = [
     {
         id: 1,
-        title: "IT Intern",
+        title: "Junior Network Administrator / IT Assistant",
         company: "PIONEER Engineering",
         duration: "2021 - 2023",
-        desc: "Assisted in network configurations, troubleshooting hardware/software issues, and maintaining IT infrastructure for the Mumbai office.",
+        desc: "Collaborated with the IT team to maintain reliable network infrastructure, assisting in the configuration of switches, routers, and firewalls for the Mumbai branch. Executed root-cause analysis on recurring system failures, identifying hardware malfunctions and coordinating warranty replacements or repairs. Managed the end-to-end lifecycle of IT assets, from procurement and imaging to deployment and decommissioning. Documented technical procedures and troubleshooting guides to streamline future incident resolution and improve knowledge sharing.",
         image: "/assets/it_intern_thumbnail.png"
     },
     {

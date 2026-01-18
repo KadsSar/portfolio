@@ -119,9 +119,34 @@ const Modal = ({ item, onClose }) => {
                             <span className="border border-gray-500 px-2 rounded text-xs text-white">HD</span>
                         </div>
 
-                        <p className="text-white text-lg leading-relaxed">
-                            {item.desc || item.subtitle || "No description available."}
-                        </p>
+                        {/* Specific Content for IT Role */}
+                        {(item.title.includes("Network Administrator") || item.title.includes("IT Assistant")) ? (
+                            <div className="font-mono text-sm bg-black p-4 rounded border border-green-900 shadow-[0_0_20px_rgba(0,255,0,0.1)]">
+                                <div className="flex space-x-2 mb-4 border-b border-green-900 pb-2">
+                                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                                    <span className="text-green-700 text-xs ml-2">root@pioneer-server:~</span>
+                                </div>
+                                <div className="space-y-2 text-green-500 max-h-[250px] overflow-y-auto no-scrollbar font-['Courier_New']">
+                                    <p className="animate-pulse">&gt; INITIALIZING CONNECTION...</p>
+                                    <p>&gt; ACCESSING JOB_LOGS... [OK]</p>
+                                    <p className="text-white mt-4">&gt; ROLE: {item.title}</p>
+                                    <p className="text-gray-500">&gt; DURATION: {item.duration}</p>
+                                    <div className="mt-4 border-l-2 border-green-800 pl-4 space-y-3">
+                                        <p>&gt; TASK_1: <span className="text-gray-300">Collaborated with IT team on network infra (Switches/Routers/Firewalls) -&gt; Mumbai Branch [SUCCESS]</span></p>
+                                        <p>&gt; TASK_2: <span className="text-gray-300">Root-cause analysis on system failures -&gt; Hardware repair/replacement [COMPLETED]</span></p>
+                                        <p>&gt; TASK_3: <span className="text-gray-300">Asset Lifecycle Mgmt (Procurement to Decommission) [OPTIMIZED]</span></p>
+                                        <p>&gt; TASK_4: <span className="text-gray-300">Documentation & Troubleshooting Guides [CREATED]</span></p>
+                                    </div>
+                                    <p className="mt-4 animate-bounce">&gt; _</p>
+                                </div>
+                            </div>
+                        ) : (
+                            <p className="text-white text-lg leading-relaxed">
+                                {item.desc || item.subtitle || "No description available."}
+                            </p>
+                        )}
 
                         {item.details && (
                             <ul className="mt-4 space-y-3 max-h-[250px] overflow-y-auto pr-2 no-scrollbar">
