@@ -31,7 +31,13 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
     ];
 
     // Search Logic
-    const allContent = [...projects, ...skills, ...experience, ...genres];
+    const allContent = [
+        ...projects.map(p => ({ ...p, type: 'project' })),
+        ...skills.map(s => ({ ...s, type: 'skill', title: s.name })), // Normalize 'name' to 'title'
+        ...experience.map(e => ({ ...e, type: 'experience' })),
+        ...genres.map(g => ({ ...g, type: 'genre' }))
+    ];
+
     const customSearchItems = [
         { title: "GitHub Profile", desc: "View my code repositories", link: "https://github.com/KadsSar", external: true },
         { title: "LinkedIn Profile", desc: "Connect professionally", link: "https://www.linkedin.com/in/sarisha-kadakia", external: true }
@@ -40,6 +46,12 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
     const searchResults = searchQuery
         ? [...allContent, ...customSearchItems].filter(item => {
             const query = searchQuery.toLowerCase();
+
+            // Special Case: "skills" triggers all skills
+            if ((query === 'skills' || query === 'skill') && item.type === 'skill') {
+                return true;
+            }
+
             return (
                 (item.title && item.title.toLowerCase().includes(query)) ||
                 (item.desc && item.desc.toLowerCase().includes(query)) ||
