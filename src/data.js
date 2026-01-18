@@ -71,15 +71,29 @@ export const experience = [
         company: "PIONEER Engineering",
         duration: "2021 - 2023",
         desc: "Collaborated with the IT team to maintain reliable network infrastructure, assisting in the configuration of switches, routers, and firewalls for the Mumbai branch. Executed root-cause analysis on recurring system failures, identifying hardware malfunctions and coordinating warranty replacements or repairs. Managed the end-to-end lifecycle of IT assets, from procurement and imaging to deployment and decommissioning. Documented technical procedures and troubleshooting guides to streamline future incident resolution and improve knowledge sharing.",
-        image: "/assets/it_intern_thumbnail.png"
+        image: "/assets/it_intern_thumbnail.png",
+        terminalLogs: [
+            "TASK_1: Collaborated with IT team on network infra (Switches/Routers/Firewalls) -> Mumbai Branch [SUCCESS]",
+            "TASK_2: Root-cause analysis on system failures -> Hardware repair/replacement [COMPLETED]",
+            "TASK_3: Asset Lifecycle Mgmt (Procurement to Decommission) [OPTIMIZED]",
+            "TASK_4: Documentation & Troubleshooting Guides [CREATED]"
+        ]
     },
     {
         id: 2,
-        title: "Software Engineer",
-        company: "Coming Soon",
-        duration: "Future",
-        desc: "Aspiring to build the next generation of spatial computing applications.",
-        image: "/assets/software_engineer_thumbnail.png"
+        title: "IT Support Specialist / Lab Assistant",
+        company: "Fr. Conceicao Rodrigues College of Engineering (FRCRCE)",
+        duration: "2019 - 2021",
+        desc: "Served as a key member of the technical support team for a premier engineering institution, ensuring high availability of IT infrastructure for computer labs, faculty departments, and administrative offices.",
+        image: "/assets/software_engineer_thumbnail.png",
+        terminalLogs: [
+            "TASK_1: Lab Infrastructure Management (200+ workstations) -> Imaging, drivers, patch mgmt [MAINTAINED]",
+            "TASK_2: Software Deployment (C/C++, Java, MATLAB, AutoCAD) & License Compliance [DEPLOYED]",
+            "TASK_3: Network Admin -> Troubleshooting LAN/Switch ports/Static IPs [RESOLVED]",
+            "TASK_4: Hardware Troubleshooting (Tier 1/2) -> Reduced downtime during academic hours [COMPLETED]",
+            "TASK_5: User Support & Ticketing (OS/WiFi/Peripherals) [SUPPORTED]",
+            "TASK_6: Exam Support -> Secure isolated network environments [SECURED]"
+        ]
     }
 ];
 

@@ -32,7 +32,7 @@ const Modal = ({ item, onClose }) => {
                 `}</style>
 
                 {/* Hero Section of Modal */}
-                <div className={`relative ${item.details ? 'h-[35vh]' : (item.title.includes("Network Administrator") ? 'h-[40vh]' : 'h-[50vh]')} w-full bg-black overflow-hidden`}>
+                <div className={`relative ${item.details ? 'h-[35vh]' : (item.terminalLogs ? 'h-[30vh]' : 'h-[50vh]')} w-full bg-black overflow-hidden`}>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent z-20 pointer-events-none" />
                     <div className="absolute inset-y-0 left-0 w-96 bg-gradient-to-r from-[#181818] to-transparent z-20 pointer-events-none" />
                     <div className="absolute inset-y-0 right-0 w-96 bg-gradient-to-l from-[#181818] to-transparent z-20 pointer-events-none" />
@@ -74,8 +74,11 @@ const Modal = ({ item, onClose }) => {
                                         ? "text-cyan-400 font-['Cinzel'] text-5xl font-bold tracking-widest drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]"
                                         : (item.title === "Nutribudget")
                                             ? "text-green-600 font-['Oswald'] text-6xl tracking-wide [-webkit-text-stroke:0.5px_orange]"
-                                            : "text-white"
-                                }`}
+                                            : (item.title.includes("Network Administrator"))
+                                                ? "text-pink-600"
+                                                : "text-white"
+                                }`
+                            }
                             style={{
                                 fontFamily: (item.title === "Jurassic Park Interactive")
                                     ? "'Tribeca', sans-serif"
@@ -120,7 +123,7 @@ const Modal = ({ item, onClose }) => {
                         </div>
 
                         {/* Specific Content for IT Role */}
-                        {(item.title.includes("Network Administrator") || item.title.includes("IT Assistant")) ? (
+                        {(item.terminalLogs) ? (
                             <div className="font-mono text-sm bg-black p-4 rounded border border-green-900 shadow-[0_0_20px_rgba(0,255,0,0.1)]">
                                 <div className="flex space-x-2 mb-4 border-b border-green-900 pb-2">
                                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -134,10 +137,9 @@ const Modal = ({ item, onClose }) => {
                                     <p className="text-white mt-4">&gt; ROLE: {item.title}</p>
                                     <p className="text-gray-500">&gt; DURATION: {item.duration}</p>
                                     <div className="mt-4 border-l-2 border-green-800 pl-4 space-y-3">
-                                        <p>&gt; TASK_1: <span className="text-gray-300">Collaborated with IT team on network infra (Switches/Routers/Firewalls) -&gt; Mumbai Branch [SUCCESS]</span></p>
-                                        <p>&gt; TASK_2: <span className="text-gray-300">Root-cause analysis on system failures -&gt; Hardware repair/replacement [COMPLETED]</span></p>
-                                        <p>&gt; TASK_3: <span className="text-gray-300">Asset Lifecycle Mgmt (Procurement to Decommission) [OPTIMIZED]</span></p>
-                                        <p>&gt; TASK_4: <span className="text-gray-300">Documentation & Troubleshooting Guides [CREATED]</span></p>
+                                        {item.terminalLogs.map((log, index) => (
+                                            <p key={index}>&gt; {log}</p>
+                                        ))}
                                     </div>
                                     <p className="mt-4 animate-bounce">&gt; _</p>
                                 </div>
