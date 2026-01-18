@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Bell, Search, User, Menu, X, Github, Linkedin, Briefcase, Info, FileText, CircleUser, Play } from 'lucide-react';
+import { projects, skills, experience, genres } from '../data';
 
-const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienceClick }) => {
+const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienceClick, onSearchSelect }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,7 +21,6 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Menu Options
     const menuItems = [
         { name: "About", icon: <Info size={20} />, link: "#" },
         { name: "My Projects", icon: <FileText size={20} />, link: "#", action: "projects" },
@@ -28,6 +29,34 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
         { name: "LinkedIn", icon: <Linkedin size={20} />, link: "https://www.linkedin.com/in/sarisha-kadakia", external: true },
         { name: "Github", icon: <Github size={20} />, link: "https://github.com/KadsSar", external: true },
     ];
+
+    // Search Logic
+    const allContent = [...projects, ...skills, ...experience, ...genres];
+    const customSearchItems = [
+        { title: "GitHub Profile", desc: "View my code repositories", link: "https://github.com/KadsSar", external: true },
+        { title: "LinkedIn Profile", desc: "Connect professionally", link: "https://www.linkedin.com/in/sarisha-kadakia", external: true }
+    ];
+
+    const searchResults = searchQuery
+        ? [...allContent, ...customSearchItems].filter(item => {
+            const query = searchQuery.toLowerCase();
+            return (
+                (item.title && item.title.toLowerCase().includes(query)) ||
+                (item.desc && item.desc.toLowerCase().includes(query)) ||
+                (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query)))
+            );
+        })
+        : [];
+
+    const handleSearchItemClick = (item) => {
+        if (item.external) {
+            window.open(item.link, '_blank');
+        } else {
+            onSearchSelect(item);
+        }
+        setIsSearchOpen(false);
+        setSearchQuery('');
+    };
 
     return (
         <>
@@ -49,20 +78,55 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                                 placeholder="Titles, people, genres"
                                 className="w-full bg-transparent border-none text-white text-4xl pl-14 placeholder-gray-500 focus:outline-none focus:ring-0"
                                 autoFocus
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
                             />
                         </div>
 
-                        <h3 className="text-gray-400 text-lg mb-4">Recent Searches</h3>
-                        <div className="space-y-4">
-                            {["Nutribudget", "Contact me", "AR/VR projects"].map((search, idx) => (
-                                <div key={idx} className="flex items-center space-x-4 group cursor-pointer hover:bg-[#333] p-3 rounded transition">
-                                    <div className="w-8 h-8 rounded-full border border-gray-500 flex items-center justify-center group-hover:border-white transition">
-                                        <Play className="w-3 h-3 text-white fill-white" />
+                        {searchQuery ? (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto no-scrollbar">
+                                {searchResults.map((item, idx) => (
+                                    <div
+                                        key={idx}
+                                        className="flex items-center space-x-4 group cursor-pointer hover:bg-[#333] p-3 rounded transition"
+                                        onClick={() => handleSearchItemClick(item)}
+                                    >
+                                        <div className="w-16 h-10 overflow-hidden rounded bg-gray-800 flex-shrink-0">
+                                            {(item.image || item.modalImage) ? (
+                                                <img src={item.image || item.modalImage} alt={item.title} className="w-full h-full object-cover" />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center text-gray-500 text-xs">IMG</div>
+                                            )}
+                                        </div>
+                                        <div>
+                                            <h4 className="text-white text-lg font-bold">{item.title}</h4>
+                                            <p className="text-gray-400 text-sm">{item.desc?.substring(0, 50)}...</p>
+                                        </div>
                                     </div>
-                                    <span className="text-gray-400 text-lg font-bold group-hover:text-white transition">{search}</span>
+                                ))}
+                                {searchResults.length === 0 && (
+                                    <p className="text-gray-500 text-lg">No results found for "{searchQuery}"</p>
+                                )}
+                            </div>
+                        ) : (
+                            <>
+                                <h3 className="text-gray-400 text-lg mb-4">Recent Searches</h3>
+                                <div className="space-y-4">
+                                    {["Nutribudget", "Contact me", "AR/VR projects"].map((search, idx) => (
+                                        <div
+                                            key={idx}
+                                            className="flex items-center space-x-4 group cursor-pointer hover:bg-[#333] p-3 rounded transition"
+                                            onClick={() => setSearchQuery(search)}
+                                        >
+                                            <div className="w-8 h-8 rounded-full border border-gray-500 flex items-center justify-center group-hover:border-white transition">
+                                                <Play className="w-3 h-3 text-white fill-white" />
+                                            </div>
+                                            <span className="text-gray-400 text-lg font-bold group-hover:text-white transition">{search}</span>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
-                        </div>
+                            </>
+                        )}
                     </div>
                 </div>
             )}

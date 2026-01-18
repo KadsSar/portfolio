@@ -93,6 +93,7 @@ function App() {
         onSkillsClick={handleSkillsClick}
         onProjectsClick={handleProjectsClick}
         onExperienceClick={handleExperienceClick}
+        onSearchSelect={handleSelect}
       />
 
       <Hero onContactClick={handleContactClick} />
