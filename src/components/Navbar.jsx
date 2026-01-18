@@ -61,6 +61,8 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
         : [];
 
     const handleSearchItemClick = (item) => {
+        if (item.type === 'skill') return; // Skills are not clickable
+
         if (item.external) {
             window.open(item.link, '_blank');
         } else {
@@ -88,11 +90,19 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                             <input
                                 type="text"
                                 placeholder="Titles, people, genres"
-                                className="w-full bg-transparent border-none text-white text-4xl pl-14 placeholder-gray-500 focus:outline-none focus:ring-0"
+                                className="w-full bg-transparent border-none text-white text-4xl pl-14 pr-12 placeholder-gray-500 focus:outline-none focus:ring-0"
                                 autoFocus
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                             />
+                            {searchQuery && (
+                                <button
+                                    className="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition"
+                                    onClick={() => setSearchQuery('')}
+                                >
+                                    <X className="w-8 h-8" />
+                                </button>
+                            )}
                         </div>
 
                         {searchQuery ? (
@@ -100,7 +110,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                                 {searchResults.map((item, idx) => (
                                     <div
                                         key={idx}
-                                        className="flex items-center space-x-4 group cursor-pointer hover:bg-[#333] p-3 rounded transition"
+                                        className={`flex items-center space-x-4 group p-3 rounded transition ${item.type === 'skill' ? 'cursor-default' : 'cursor-pointer hover:bg-[#333]'}`}
                                         onClick={() => handleSearchItemClick(item)}
                                     >
                                         <div className="w-16 h-10 overflow-hidden rounded bg-gray-800 flex-shrink-0">
