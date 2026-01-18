@@ -6,6 +6,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isBioOpen, setIsBioOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
@@ -215,7 +216,61 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
 
                         <ul className="hidden lg:flex space-x-6 text-sm font-light text-gray-300 ml-8">
                             <li className="hover:text-white cursor-pointer transition">Home</li>
-                            <li className="hover:text-white cursor-pointer transition">Bio</li>
+                            <li className="relative">
+                                <span
+                                    className={`hover:text-white cursor-pointer transition ${isBioOpen ? 'text-white font-medium' : ''}`}
+                                    onClick={() => setIsBioOpen(!isBioOpen)}
+                                >
+                                    Bio
+                                </span>
+                                {isBioOpen && (
+                                    <div className="absolute top-12 left-0 z-[60]">
+                                        {/* Arrow (Static for stability) */}
+                                        <div className="absolute top-[-5px] left-6 w-3 h-3 bg-[#141414] border-t border-l border-[#333] transform rotate-45 z-20"></div>
+
+                                        {/* Neon Container */}
+                                        <div
+                                            className="relative w-96 rounded-xl overflow-hidden group p-[1px]"
+                                            onMouseMove={(e) => {
+                                                const rect = e.currentTarget.getBoundingClientRect();
+                                                const x = e.clientX - rect.left;
+                                                const y = e.clientY - rect.top;
+                                                e.currentTarget.style.setProperty('--x', `${x}px`);
+                                                e.currentTarget.style.setProperty('--y', `${y}px`);
+                                            }}
+                                        >
+                                            {/* Base Border */}
+                                            <div className="absolute inset-0 bg-[#333]" />
+
+                                            {/* Neon Border Glow */}
+                                            <div
+                                                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ease-out"
+                                                style={{
+                                                    background: `radial-gradient(400px circle at var(--x) var(--y), #E50914, transparent 40%)`
+                                                }}
+                                            />
+
+                                            {/* Content Box */}
+                                            <div className="relative bg-[#0a0a0a] rounded-xl p-6 h-full">
+                                                {/* Inner Background Spotlight */}
+                                                <div
+                                                    className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none rounded-xl"
+                                                    style={{
+                                                        background: `radial-gradient(600px circle at var(--x) var(--y), #E50914, transparent 40%)`
+                                                    }}
+                                                />
+
+                                                <h4 className="text-white font-bold text-lg mb-2 relative z-10 flex items-center gap-2">
+                                                    About Me <span className="text-xs uppercase px-2 py-0.5 border border-red-600/30 bg-red-600/10 text-red-500 rounded-full tracking-wider">DEV</span>
+                                                </h4>
+                                                <p className="text-gray-300 text-sm leading-relaxed relative z-10 font-light">
+                                                    <span className="text-white font-medium">CS Student</span> obsessed with how things work, from the metal up. Skilled in <span className="text-red-400">MIPS Assembly</span>, Calculus, and <span className="text-red-400">OCI</span>. I love tackling complex problems, whether it's debugging memory-mapped I/O or architecting a cloud solution. Currently seeking opportunities to <span className="italic text-gray-200">build impactful software</span>.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                            </li>
                             <li className="hover:text-white cursor-pointer transition" onClick={onSkillsClick}>Skills</li>
                             <li className="hover:text-white cursor-pointer transition" onClick={onLeadershipClick}>Leadership</li>
                             <li className="hover:text-white cursor-pointer transition">LearnLab</li>
