@@ -18,14 +18,7 @@ function App() {
   const handleProjectsClick = () => {
     const element = document.getElementById('latest-releases');
     if (element) {
-      const offset = 100; // Adjust this value to control how much "up" it scrolls
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
 
     if (projectsRef.current) {
@@ -100,7 +93,7 @@ function App() {
 
       <div className="relative z-20 -mt-2 md:-mt-4 pl-4 md:pl-8 xl:pl-12 pb-12 space-y-2">
         {/* Projects Row */}
-        <div id="latest-releases">
+        <div id="latest-releases" className="scroll-mt-28">
           <Row
             ref={projectsRef}
             title="Latest Releases"
