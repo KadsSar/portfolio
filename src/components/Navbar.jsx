@@ -280,20 +280,22 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
 
                     {/* Right Icons */}
                     <div className="flex items-center space-x-6 text-white">
-                    </button>
-                    <Bell
-                        className={`w-5 h-5 cursor-pointer transition duration-300 ${isRinging ? 'animate-ring text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]' : 'text-white hover:text-gray-300'}`}
-                        onClick={() => {
-                            setIsRinging(true);
-                            setTimeout(() => setIsRinging(false), 500);
-                        }}
-                    />
-                    <div className="flex items-center space-x-2 cursor-pointer group">
-                        <CircleUser className="w-9 h-9 text-white hover:text-gray-300 transition" strokeWidth={1.5} />
+                        <button onClick={() => setIsSearchOpen(true)}>
+                            <Search className="w-5 h-5 cursor-pointer hover:text-gray-300 transition" />
+                        </button>
+                        <Bell
+                            className={`w-5 h-5 cursor-pointer transition duration-300 ${isRinging ? 'animate-ring text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]' : 'text-white hover:text-gray-300'}`}
+                            onClick={() => {
+                                setIsRinging(true);
+                                setTimeout(() => setIsRinging(false), 500);
+                            }}
+                        />
+                        <div className="flex items-center space-x-2 cursor-pointer group">
+                            <CircleUser className="w-9 h-9 text-white hover:text-gray-300 transition" strokeWidth={1.5} />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav >
+            </nav >
         </>
     );
 };
