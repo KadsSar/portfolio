@@ -1,4 +1,5 @@
-import React, { useRef, useEffect, useState, useMemo } from 'react';
+/* eslint-disable react-hooks/purity */
+import React, { useRef, useEffect, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, Text, Environment, PerspectiveCamera, Stars } from '@react-three/drei';
 import * as THREE from 'three';
@@ -14,6 +15,7 @@ function Rain() {
 
     const particles = useMemo(() => {
         const positions = new Float32Array(count * 3);
+
         for (let i = 0; i < count; i++) {
             positions[i * 3] = (Math.random() - 0.5) * 30;
             positions[i * 3 + 1] = Math.random() * 20;
@@ -125,16 +127,16 @@ function TRex() {
 }
 
 export default function JurassicModal3D() {
-    const [audio] = useState(new Audio(ROAR_URL));
-
     useEffect(() => {
+        const audio = new Audio(ROAR_URL);
         audio.volume = 0.5;
         audio.play().catch(e => console.warn("Audio play failed", e));
+
         return () => {
             audio.pause();
             audio.currentTime = 0;
         };
-    }, [audio]);
+    }, []);
 
     return (
         <div className="w-full h-full absolute inset-0 bg-black overflow-hidden">

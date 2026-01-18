@@ -84,7 +84,7 @@ const Background3D = () => {
         window.addEventListener('resize', handleResize);
 
         // Animation Loop
-        const clock = new THREE.Clock(); // Use clock for smooth delta based movement if needed
+
 
         const tick = () => {
             targetX = mouseX * 0.001;
