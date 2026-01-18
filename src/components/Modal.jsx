@@ -32,7 +32,7 @@ const Modal = ({ item, onClose }) => {
                 `}</style>
 
                 {/* Hero Section of Modal */}
-                <div className={`relative ${item.details ? 'h-[35vh]' : 'h-[50vh]'} w-full bg-black overflow-hidden`}>
+                <div className={`relative ${item.details ? 'h-[35vh]' : (item.title.includes("Network Administrator") ? 'h-[40vh]' : 'h-[50vh]')} w-full bg-black overflow-hidden`}>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent z-20 pointer-events-none" />
                     <div className="absolute inset-y-0 left-0 w-96 bg-gradient-to-r from-[#181818] to-transparent z-20 pointer-events-none" />
                     <div className="absolute inset-y-0 right-0 w-96 bg-gradient-to-l from-[#181818] to-transparent z-20 pointer-events-none" />
@@ -128,7 +128,7 @@ const Modal = ({ item, onClose }) => {
                                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                                     <span className="text-green-700 text-xs ml-2">root@pioneer-server:~</span>
                                 </div>
-                                <div className="space-y-2 text-green-500 max-h-[250px] overflow-y-auto no-scrollbar font-['Courier_New']">
+                                <div className="space-y-2 text-green-500 font-['Courier_New'] max-h-[250px] overflow-y-auto no-scrollbar">
                                     <p className="animate-pulse">&gt; INITIALIZING CONNECTION...</p>
                                     <p>&gt; ACCESSING JOB_LOGS... [OK]</p>
                                     <p className="text-white mt-4">&gt; ROLE: {item.title}</p>
