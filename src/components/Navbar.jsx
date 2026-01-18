@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Bell, Search, User, Menu, X, Github, Linkedin, Briefcase, Info, FileText, CircleUser } from 'lucide-react';
+import { Bell, Search, User, Menu, X, Github, Linkedin, Briefcase, Info, FileText, CircleUser, Play } from 'lucide-react';
 
 const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienceClick }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,6 +31,42 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
 
     return (
         <>
+            {/* Search Overlay */}
+            {isSearchOpen && (
+                <div className="fixed inset-0 z-[100] bg-black/90 flex flex-col items-center pt-20 animate-fade-in">
+                    <button
+                        className="absolute top-6 right-8 text-white hover:text-gray-300 transition"
+                        onClick={() => setIsSearchOpen(false)}
+                    >
+                        <X className="w-8 h-8" />
+                    </button>
+
+                    <div className="w-full max-w-4xl px-4 animate-scale-up">
+                        <div className="relative mb-12">
+                            <Search className="absolute left-0 top-1/2 transform -translate-y-1/2 w-8 h-8 text-gray-400" />
+                            <input
+                                type="text"
+                                placeholder="Titles, people, genres"
+                                className="w-full bg-transparent border-none text-white text-4xl pl-14 placeholder-gray-500 focus:outline-none focus:ring-0"
+                                autoFocus
+                            />
+                        </div>
+
+                        <h3 className="text-gray-400 text-lg mb-4">Recent Searches</h3>
+                        <div className="space-y-4">
+                            {["Nutribudget", "Contact me", "AR/VR projects"].map((search, idx) => (
+                                <div key={idx} className="flex items-center space-x-4 group cursor-pointer hover:bg-[#333] p-3 rounded transition">
+                                    <div className="w-8 h-8 rounded-full border border-gray-500 flex items-center justify-center group-hover:border-white transition">
+                                        <Play className="w-3 h-3 text-white fill-white" />
+                                    </div>
+                                    <span className="text-gray-400 text-lg font-bold group-hover:text-white transition">{search}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* Sidebar Menu Overlay */}
             <div className={`fixed inset-0 z-[100] bg-black/50 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`} onClick={() => setIsMenuOpen(false)}>
                 {/* Sidebar Slide-in */}
@@ -101,7 +138,9 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
 
                     {/* Right Icons */}
                     <div className="flex items-center space-x-6 text-white">
-                        <Search className="w-5 h-5 cursor-pointer hover:text-gray-300 transition" />
+                        <button onClick={() => setIsSearchOpen(true)}>
+                            <Search className="w-5 h-5 cursor-pointer hover:text-gray-300 transition" />
+                        </button>
                         <Bell className="w-5 h-5 cursor-pointer hover:text-gray-300 transition" />
                         <div className="flex items-center space-x-2 cursor-pointer group">
                             <CircleUser className="w-9 h-9 text-white hover:text-gray-300 transition" strokeWidth={1.5} />
