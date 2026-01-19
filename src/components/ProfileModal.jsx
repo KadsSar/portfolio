@@ -34,7 +34,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
 
                 {/* Right Side: Content (Bottom on mobile, Right on desktop) */}
                 <div
-                    className="relative w-full md:w-1/2 p-6 md:p-20 flex flex-col justify-center min-h-[50vh] md:min-h-screen bg-black group overflow-hidden"
+                    className="relative w-full md:w-1/2 min-h-[50vh] md:min-h-screen group p-[1px] overflow-hidden"
                     onMouseMove={(e) => {
                         const rect = e.currentTarget.getBoundingClientRect();
                         const x = e.clientX - rect.left;
@@ -43,61 +43,73 @@ const ProfileModal = ({ isOpen, onClose }) => {
                         e.currentTarget.style.setProperty('--y', `${y}px`);
                     }}
                 >
-                    {/* Spotlight Effect */}
+                    {/* Border Layers */}
+                    <div className="absolute inset-0 bg-[#333]" />
                     <div
-                        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                         style={{
-                            background: `radial-gradient(600px circle at var(--x) var(--y), rgba(248, 113, 113, 0.25), transparent 40%)`
+                            background: `radial-gradient(400px circle at var(--x) var(--y), rgba(248, 113, 113, 0.8), transparent 40%)`
                         }}
                     />
 
-                    <div className="max-w-xl mx-auto md:mx-0 animate-slide-up space-y-8 relative z-10">
-                        <div>
-                            <h3 className="text-red-500 font-bold tracking-widest text-sm mb-3 uppercase">About the User</h3>
-                            <h2 className="text-5xl md:text-7xl font-['Bebas_Neue'] tracking-wide text-white mb-4 leading-none">Sarisha<br />Kadakia</h2>
-                            <div className="h-1 w-20 bg-red-600 mb-6"></div>
-                            <p className="text-gray-400 font-medium tracking-wide text-sm md:text-base uppercase">Computer Science Student • Creative Technologist</p>
-                        </div>
+                    {/* Inner Content Container */}
+                    <div className="relative h-full w-full bg-black flex flex-col justify-center p-6 md:p-20">
+                        {/* Inner Background Spotlight */}
+                        <div
+                            className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            style={{
+                                background: `radial-gradient(600px circle at var(--x) var(--y), rgba(248, 113, 113, 0.15), transparent 40%)`
+                            }}
+                        />
 
-                        <div className="space-y-6 text-gray-300 font-light leading-relaxed text-base md:text-lg">
-                            <p>
-                                <span className="text-white font-medium">About the Author: </span> Sarisha Kadakia is a Computer Science student at Brock University who treats the IDE like a canvas and code like a medium. She believes that a robust algorithm requires the same intentionality as a blank sketchbook.
-                            </p>
-                            <p>
-                                When she isn’t wrestling with the logic of MIPS Assembly or configuring Cloud infrastructure, you can find her painting, designing, and immersing herself in creative side projects that keep her right brain just as active as her left.
-                            </p>
-                            <p>
-                                She operates on the belief that the best software doesn't just function, it feels designed. Now, she is looking to bring this unique fusion of technical grit and artistic vision to a forward-thinking team, helping to build products that are as intuitive as they are powerful.
-                            </p>
-                        </div>
+                        <div className="max-w-xl mx-auto md:mx-0 animate-slide-up space-y-8 relative z-10">
+                            <div>
+                                <h3 className="text-red-500 font-bold tracking-widest text-sm mb-3 uppercase">About the User</h3>
+                                <h2 className="text-5xl md:text-7xl font-['Bebas_Neue'] tracking-wide text-white mb-4 leading-none">Sarisha<br />Kadakia</h2>
+                                <div className="h-1 w-20 bg-red-600 mb-6"></div>
+                                <p className="text-gray-400 font-medium tracking-wide text-sm md:text-base uppercase">Computer Science Student • Creative Technologist</p>
+                            </div>
 
-                        {/* Interactive Buttons */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8">
-                            <a
-                                href="https://www.linkedin.com/in/sarisha-kadakia"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center justify-center gap-3 px-6 py-4 bg-[#0077b5] text-white rounded transition-all hover:bg-[#006097]"
-                            >
-                                <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                                <span className="font-semibold">Connect on LinkedIn</span>
-                            </a>
-                            <a
-                                href="https://github.com/KadsSar"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex items-center justify-center gap-3 px-6 py-4 bg-[#24292e] text-white rounded transition-all hover:bg-[#1b1f23]"
-                            >
-                                <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                                <span className="font-semibold">View GitHub</span>
-                            </a>
-                            <a
-                                href="mailto:sarishakadakia16@gmail.com"
-                                className="group sm:col-span-2 flex items-center justify-center gap-3 px-6 py-4 bg-transparent border border-red-600 text-red-500 rounded transition-all hover:bg-red-600 hover:text-white"
-                            >
-                                <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                                <span className="font-semibold">Send Email</span>
-                            </a>
+                            <div className="space-y-6 text-gray-300 font-light leading-relaxed text-base md:text-lg">
+                                <p>
+                                    <span className="text-white font-medium">About the Author: </span> Sarisha Kadakia is a Computer Science student at Brock University who treats the IDE like a canvas and code like a medium. She believes that a robust algorithm requires the same intentionality as a blank sketchbook.
+                                </p>
+                                <p>
+                                    When she isn’t wrestling with the logic of MIPS Assembly or configuring Cloud infrastructure, you can find her painting, designing, and immersing herself in creative side projects that keep her right brain just as active as her left.
+                                </p>
+                                <p>
+                                    She operates on the belief that the best software doesn't just function, it feels designed. Now, she is looking to bring this unique fusion of technical grit and artistic vision to a forward-thinking team, helping to build products that are as intuitive as they are powerful.
+                                </p>
+                            </div>
+
+                            {/* Interactive Buttons */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8">
+                                <a
+                                    href="https://www.linkedin.com/in/sarisha-kadakia"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center justify-center gap-3 px-6 py-4 bg-[#0077b5] text-white rounded transition-all hover:bg-[#006097]"
+                                >
+                                    <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                    <span className="font-semibold">Connect on LinkedIn</span>
+                                </a>
+                                <a
+                                    href="https://github.com/KadsSar"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center justify-center gap-3 px-6 py-4 bg-[#24292e] text-white rounded transition-all hover:bg-[#1b1f23]"
+                                >
+                                    <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                    <span className="font-semibold">View GitHub</span>
+                                </a>
+                                <a
+                                    href="mailto:sarishakadakia16@gmail.com"
+                                    className="group sm:col-span-2 flex items-center justify-center gap-3 px-6 py-4 bg-transparent border border-red-600 text-red-500 rounded transition-all hover:bg-red-600 hover:text-white"
+                                >
+                                    <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                    <span className="font-semibold">Send Email</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
