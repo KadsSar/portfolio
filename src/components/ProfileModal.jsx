@@ -48,7 +48,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
                     <div
                         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                         style={{
-                            background: `radial-gradient(400px circle at var(--x) var(--y), rgba(248, 113, 113, 0.8), transparent 40%)`
+                            background: `radial-gradient(800px circle at var(--x) var(--y), rgba(248, 113, 113, 1), transparent 40%)`
                         }}
                     />
 
@@ -58,7 +58,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
                         <div
                             className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                             style={{
-                                background: `radial-gradient(600px circle at var(--x) var(--y), rgba(248, 113, 113, 0.15), transparent 40%)`
+                                background: `radial-gradient(1000px circle at var(--x) var(--y), rgba(248, 113, 113, 0.4), transparent 40%)`
                             }}
                         />
 
