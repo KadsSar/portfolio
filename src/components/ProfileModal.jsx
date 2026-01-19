@@ -6,7 +6,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-[100] bg-[#141414] overflow-y-auto animate-fade-in">
+        <div className="fixed inset-0 z-[100] bg-black overflow-y-auto animate-fade-in">
             {/* Close Button - Fixed to viewport */}
             <button
                 onClick={onClose}
@@ -19,8 +19,8 @@ const ProfileModal = ({ isOpen, onClose }) => {
 
                 {/* Left Side: Image (Top on mobile, Left on desktop) */}
                 <div className="relative w-full md:w-1/2 h-[50vh] md:h-auto md:min-h-screen md:fixed md:top-0 md:left-0 md:bottom-0">
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent z-10 md:hidden" /> {/* Mobile bottom fade */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#141414] z-10 hidden md:block" /> {/* Desktop right fade */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 md:hidden" /> {/* Mobile bottom fade */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black z-10 hidden md:block" /> {/* Desktop right fade */}
 
                     <img
                         src={profileImg}
@@ -34,7 +34,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
 
                 {/* Right Side: Content (Bottom on mobile, Right on desktop) */}
                 <div
-                    className="relative w-full md:w-1/2 p-6 md:p-20 flex flex-col justify-center min-h-[50vh] md:min-h-screen bg-[#141414] group overflow-hidden"
+                    className="relative w-full md:w-1/2 p-6 md:p-20 flex flex-col justify-center min-h-[50vh] md:min-h-screen bg-black group overflow-hidden"
                     onMouseMove={(e) => {
                         const rect = e.currentTarget.getBoundingClientRect();
                         const x = e.clientX - rect.left;
@@ -47,7 +47,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
                     <div
                         className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         style={{
-                            background: `radial-gradient(600px circle at var(--x) var(--y), rgba(220, 38, 38, 0.15), transparent 40%)`
+                            background: `radial-gradient(600px circle at var(--x) var(--y), rgba(248, 113, 113, 0.25), transparent 40%)`
                         }}
                     />
 
