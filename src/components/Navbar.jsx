@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Bell, Search, User, Menu, X, Github, Linkedin, Briefcase, Info, FileText, CircleUser, Play } from 'lucide-react';
 import { projects, skills, experience, genres } from '../data';
+import ProfileModal from './ProfileModal';
 
 const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienceClick, onSearchSelect }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -9,6 +10,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
     const [isBioOpen, setIsBioOpen] = useState(false);
     const [isRinging, setIsRinging] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,7 +26,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
     }, []);
 
     const menuItems = [
-        { name: "About", icon: <Info size={20} />, link: "#" },
+        { name: "About", icon: <Info size={20} />, link: "#", action: "profile" },
         { name: "My Projects", icon: <FileText size={20} />, link: "#", action: "projects" },
         { name: "Experience", icon: <Briefcase size={20} />, link: "#", action: "experience" },
         { name: "Resume", icon: <FileText size={20} />, link: "#" },
@@ -76,6 +78,8 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
 
     return (
         <>
+            <ProfileModal isOpen={isProfileOpen} onClose={() => setIsProfileOpen(false)} />
+
             {/* Search Overlay */}
             {isSearchOpen && (
                 <div className="fixed inset-0 z-[100] bg-black/90 flex flex-col items-center pt-20 animate-fade-in">
@@ -185,6 +189,8 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                                             onProjectsClick();
                                         } else if (item.action === "experience" && onExperienceClick) {
                                             onExperienceClick();
+                                        } else if (item.action === "profile") {
+                                            setIsProfileOpen(true);
                                         } else if (item.external) {
                                             window.open(item.link, '_blank');
                                         }
@@ -290,7 +296,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                                 setTimeout(() => setIsRinging(false), 500);
                             }}
                         />
-                        <div className="flex items-center space-x-2 cursor-pointer group">
+                        <div className="flex items-center space-x-2 cursor-pointer group" onClick={() => setIsProfileOpen(true)}>
                             <CircleUser className="w-9 h-9 text-white hover:text-gray-300 transition" strokeWidth={1.5} />
                         </div>
                     </div>
