@@ -33,9 +33,25 @@ const ProfileModal = ({ isOpen, onClose }) => {
                 <div className="hidden md:block md:w-1/2"></div>
 
                 {/* Right Side: Content (Bottom on mobile, Right on desktop) */}
-                <div className="relative w-full md:w-1/2 p-6 md:p-20 flex flex-col justify-center min-h-[50vh] md:min-h-screen bg-[#141414]">
+                <div
+                    className="relative w-full md:w-1/2 p-6 md:p-20 flex flex-col justify-center min-h-[50vh] md:min-h-screen bg-[#141414] group overflow-hidden"
+                    onMouseMove={(e) => {
+                        const rect = e.currentTarget.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        e.currentTarget.style.setProperty('--x', `${x}px`);
+                        e.currentTarget.style.setProperty('--y', `${y}px`);
+                    }}
+                >
+                    {/* Spotlight Effect */}
+                    <div
+                        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        style={{
+                            background: `radial-gradient(600px circle at var(--x) var(--y), rgba(220, 38, 38, 0.15), transparent 40%)`
+                        }}
+                    />
 
-                    <div className="max-w-xl mx-auto md:mx-0 animate-slide-up space-y-8">
+                    <div className="max-w-xl mx-auto md:mx-0 animate-slide-up space-y-8 relative z-10">
                         <div>
                             <h3 className="text-red-500 font-bold tracking-widest text-sm mb-3 uppercase">About the User</h3>
                             <h2 className="text-5xl md:text-7xl font-['Bebas_Neue'] tracking-wide text-white mb-4 leading-none">Sarisha<br />Kadakia</h2>
@@ -76,7 +92,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
                                 <span className="font-semibold">View GitHub</span>
                             </a>
                             <a
-                                href="mailto:tn24yv@brocku.ca"
+                                href="mailto:sarishakadakia16@gmail.com"
                                 className="group sm:col-span-2 flex items-center justify-center gap-3 px-6 py-4 bg-transparent border border-red-600 text-red-500 rounded transition-all hover:bg-red-600 hover:text-white"
                             >
                                 <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
