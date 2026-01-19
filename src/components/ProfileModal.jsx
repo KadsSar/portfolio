@@ -45,7 +45,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
 
                         <div className="space-y-6 text-gray-300 font-light leading-relaxed text-base md:text-lg">
                             <p>
-                                <span className="text-white font-medium">About the Author,</span> Sarisha Kadakia is a Computer Science student at Brock University who treats the IDE like a canvas and code like a medium. She believes that a robust algorithm requires the same intentionality as a blank sketchbook.
+                                <span className="text-white font-medium">About the Author: </span> Sarisha Kadakia is a Computer Science student at Brock University who treats the IDE like a canvas and code like a medium. She believes that a robust algorithm requires the same intentionality as a blank sketchbook.
                             </p>
                             <p>
                                 When she isn’t wrestling with the logic of MIPS Assembly or configuring Cloud infrastructure, you can find her painting, designing, and immersing herself in creative side projects that keep her right brain just as active as her left.
