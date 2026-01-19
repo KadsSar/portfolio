@@ -48,7 +48,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
                     <div
                         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                         style={{
-                            background: `radial-gradient(800px circle at var(--x) var(--y), rgba(248, 113, 113, 1), transparent 40%)`
+                            background: `radial-gradient(300px circle at var(--x) var(--y), rgba(177, 13, 13, 1), transparent 40%)`
                         }}
                     />
 
@@ -58,7 +58,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
                         <div
                             className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                             style={{
-                                background: `radial-gradient(1000px circle at var(--x) var(--y), rgba(248, 113, 113, 0.4), transparent 40%)`
+                                background: `radial-gradient(500px circle at var(--x) var(--y), rgba(177, 13, 13, 0.4), transparent 40%)`
                             }}
                         />
 
@@ -72,7 +72,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
 
                             <div className="space-y-6 text-gray-300 font-light leading-relaxed text-base md:text-lg">
                                 <p>
-                                    <span className="text-white font-medium">About the Author: </span> Sarisha Kadakia is a Computer Science student at Brock University who treats the IDE like a canvas and code like a medium. She believes that a robust algorithm requires the same intentionality as a blank sketchbook.
+                                    <span className="text-white font-medium"> Know more about the Author: </span> Sarisha Kadakia is a Computer Science student at Brock University who treats the IDE like a canvas and code like a medium. She believes that a robust algorithm requires the same intentionality as a blank sketchbook.
                                 </p>
                                 <p>
                                     When she isn’t wrestling with the logic of MIPS Assembly or configuring Cloud infrastructure, you can find her painting, designing, and immersing herself in creative side projects that keep her right brain just as active as her left.
