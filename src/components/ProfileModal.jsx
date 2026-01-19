@@ -51,7 +51,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
                                 When she isn’t wrestling with the logic of MIPS Assembly or configuring Cloud infrastructure, you can find her painting, designing, and immersing herself in creative side projects that keep her right brain just as active as her left.
                             </p>
                             <p>
-                                She operates on the belief that the best software doesn't just function—it feels designed. Now, she is looking to bring this unique fusion of technical grit and artistic vision to a forward-thinking team, helping to build products that are as intuitive as they are powerful.
+                                She operates on the belief that the best software doesn't just function, it feels designed. Now, she is looking to bring this unique fusion of technical grit and artistic vision to a forward-thinking team, helping to build products that are as intuitive as they are powerful.
                             </p>
                         </div>
 
