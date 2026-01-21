@@ -4,10 +4,12 @@ import { X, Play, Plus, ThumbsUp } from 'lucide-react';
 const Modal = ({ item, onClose }) => {
     const [videoLoaded, setVideoLoaded] = React.useState(false);
     const [isLiked, setIsLiked] = React.useState(false);
+    const [showCodeSnippet, setShowCodeSnippet] = React.useState(false);
 
     React.useEffect(() => {
         setVideoLoaded(false);
         setIsLiked(false);
+        setShowCodeSnippet(false);
     }, [item]);
 
     if (!item) return null;
@@ -100,8 +102,11 @@ const Modal = ({ item, onClose }) => {
                             >
                                 <Play className="w-5 h-5 mr-2 fill-black" /> Visit
                             </button>
-                            <button className="flex items-center justify-center w-10 h-10 border-2 border-gray-500 rounded-full hover:border-white transition">
-                                <Plus className="w-5 h-5 text-gray-300" />
+                            <button
+                                onClick={() => setShowCodeSnippet(!showCodeSnippet)}
+                                className={`flex items-center justify-center w-10 h-10 border-2 rounded-full transition ${showCodeSnippet ? 'border-white bg-white/20' : 'border-gray-500 hover:border-white'}`}
+                            >
+                                <Plus className={`w-5 h-5 ${showCodeSnippet ? 'text-white' : 'text-gray-300'}`} />
                             </button>
                             <button
                                 onClick={() => setIsLiked(!isLiked)}
@@ -122,8 +127,20 @@ const Modal = ({ item, onClose }) => {
                             <span className="border border-gray-500 px-2 rounded text-xs text-white">HD</span>
                         </div>
 
-                        {/* Specific Content for IT Role */}
-                        {(item.terminalLogs) ? (
+                        {/* Specific Content for IT Role or Code Snippet */}
+                        {(showCodeSnippet && item.codeSnippet) ? (
+                            <div className="font-mono text-sm bg-black p-4 rounded border border-gray-800 shadow-2xl h-[400px] overflow-y-auto custom-scrollbar">
+                                <div className="flex space-x-2 mb-4 border-b border-gray-800 pb-2">
+                                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                                    <span className="text-gray-500 text-xs ml-2">README.md</span>
+                                </div>
+                                <div className="text-gray-300 font-['Courier_New'] whitespace-pre-wrap leading-relaxed">
+                                    {item.codeSnippet}
+                                </div>
+                            </div>
+                        ) : (item.terminalLogs) ? (
                             <div className="font-mono text-sm bg-black p-4 rounded border border-green-900 shadow-[0_0_20px_rgba(0,255,0,0.1)]">
                                 <div className="flex space-x-2 mb-4 border-b border-green-900 pb-2">
                                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
