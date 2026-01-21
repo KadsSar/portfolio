@@ -247,7 +247,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                                         if (!isHomeOpen) setIsBioOpen(false);
                                     }}
                                 >
-                                    Home
+                                    Navigate
                                 </span>
                                 {isHomeOpen && (
                                     <div className="absolute top-12 left-0 z-[60] animate-fade-in-down">
