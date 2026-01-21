@@ -223,7 +223,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                         <h1 className="text-netflix-red text-2xl md:text-4xl font-bold tracking-tighter cursor-pointer font-['Bebas_Neue']">PORTFOLIO</h1>
 
                         <ul className="hidden lg:flex space-x-6 text-sm font-light text-gray-300 ml-8">
-                            <li className="relative">
+                            <li className="relative" ref={homeRef}>
                                 <span
                                     className={`hover:text-white cursor-pointer transition ${isHomeOpen ? 'text-white font-medium' : ''}`}
                                     onClick={() => {
@@ -290,7 +290,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                                     </div>
                                 )}
                             </li>
-                            <li className="relative">
+                            <li className="relative" ref={bioRef}>
                                 <span
                                     className={`hover:text-white cursor-pointer transition ${isBioOpen ? 'text-white font-medium' : ''}`}
                                     onClick={() => {
