@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Bell, Search, User, Menu, X, Github, Linkedin, Briefcase, Info, FileText, CircleUser, Play } from 'lucide-react';
 import { projects, skills, experience, genres } from '../data';
 import ProfileModal from './ProfileModal';
@@ -13,6 +13,9 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
     const [searchQuery, setSearchQuery] = useState('');
     const [isProfileOpen, setIsProfileOpen] = useState(false);
 
+    const homeRef = useRef(null);
+    const bioRef = useRef(null);
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
@@ -22,8 +25,21 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
             }
         };
 
+        const handleClickOutside = (event) => {
+            if (homeRef.current && !homeRef.current.contains(event.target)) {
+                setIsHomeOpen(false);
+            }
+            if (bioRef.current && !bioRef.current.contains(event.target)) {
+                setIsBioOpen(false);
+            }
+        };
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
     }, []);
 
     const menuItems = [
