@@ -8,6 +8,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isBioOpen, setIsBioOpen] = useState(false);
+    const [isHomeOpen, setIsHomeOpen] = useState(false);
     const [isRinging, setIsRinging] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -222,7 +223,69 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                         <h1 className="text-netflix-red text-2xl md:text-4xl font-bold tracking-tighter cursor-pointer font-['Bebas_Neue']">PORTFOLIO</h1>
 
                         <ul className="hidden lg:flex space-x-6 text-sm font-light text-gray-300 ml-8">
-                            <li className="hover:text-white cursor-pointer transition">Home</li>
+                            <li className="relative">
+                                <span
+                                    className={`hover:text-white cursor-pointer transition ${isHomeOpen ? 'text-white font-medium' : ''}`}
+                                    onClick={() => setIsHomeOpen(!isHomeOpen)}
+                                >
+                                    Home
+                                </span>
+                                {isHomeOpen && (
+                                    <div className="absolute top-12 left-0 z-[60] animate-fade-in-down">
+                                        {/* Arrow */}
+                                        <div className="absolute top-[-5px] left-4 w-3 h-3 bg-[#141414] border-t border-l border-[#333] transform rotate-45 z-20"></div>
+
+                                        {/* Neon Container */}
+                                        <div
+                                            className="relative w-[500px] rounded-xl overflow-hidden group p-[1px]"
+                                            onMouseMove={(e) => {
+                                                const rect = e.currentTarget.getBoundingClientRect();
+                                                const x = e.clientX - rect.left;
+                                                const y = e.clientY - rect.top;
+                                                e.currentTarget.style.setProperty('--x', `${x}px`);
+                                                e.currentTarget.style.setProperty('--y', `${y}px`);
+                                            }}
+                                        >
+                                            <div className="absolute inset-0 bg-[#333]" />
+                                            <div
+                                                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ease-out"
+                                                style={{ background: `radial-gradient(600px circle at var(--x) var(--y), #E50914, transparent 40%)` }}
+                                            />
+
+                                            <div className="relative bg-[#0a0a0a] rounded-xl p-6 h-full">
+                                                <div
+                                                    className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none rounded-xl"
+                                                    style={{ background: `radial-gradient(800px circle at var(--x) var(--y), #ffffff, transparent 40%)` }}
+                                                />
+
+                                                <h3 className="text-xl font-bold text-white mb-6 font-['Bebas_Neue'] tracking-wider border-b border-gray-800 pb-2">
+                                                    NAVIGATE Through MY PORTFOLIO!
+                                                </h3>
+
+                                                <div className="space-y-4">
+                                                    {[
+                                                        { icon: <Play className="w-4 h-4 text-red-500" />, text: "The Latest releases row is my projects", highlight: "projects" },
+                                                        { icon: <div className="text-green-500 font-bold text-xs">TOP</div>, text: "The Top trending row is my acquired skills and my knowledge", highlight: "skills" },
+                                                        { icon: <div className="text-blue-500 font-bold text-xs">PICKS</div>, text: "Top pick ups for you row has my experience", highlight: "experience" },
+                                                        { icon: <div className="w-2 h-2 rounded-full bg-yellow-500" />, text: "Select genre is my information and history", highlight: "info" },
+                                                        { icon: <Menu className="w-4 h-4 text-purple-500" />, text: "Try clicking all the buttons in the pop ups, every button has unique information!", highlight: "buttons" },
+                                                        { icon: <User className="w-4 h-4 text-orange-500" />, text: "Click on the profile option in the top right corner to know who I am", highlight: "profile" },
+                                                        { icon: <Play className="w-4 h-4 fill-white text-white" />, text: "Try clicking on the 'watch now' button and I'll say hi!", highlight: "watch" },
+                                                        { icon: <Search className="w-4 h-4 text-gray-400" />, text: "The search option will help you find everything you want", highlight: "search" }
+                                                    ].map((item, idx) => (
+                                                        <div key={idx} className="flex items-start space-x-3 group/item">
+                                                            <div className="mt-1 flex-shrink-0">{item.icon}</div>
+                                                            <p className="text-gray-400 text-sm group-hover/item:text-white transition-colors duration-200">
+                                                                {item.text}
+                                                            </p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                            </li>
                             <li className="relative">
                                 <span
                                     className={`hover:text-white cursor-pointer transition ${isBioOpen ? 'text-white font-medium' : ''}`}
