@@ -11,7 +11,7 @@ const Hero = ({ onContactClick }) => {
                 style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
             >
                 <img
-                    src="/hero-bg.png"
+                    src={userData.heroImage}
                     alt="Hero Background"
                     className="w-full h-full object-cover"
                 />
