@@ -55,7 +55,7 @@ const Modal = ({ item, onClose }) => {
                         <div className="absolute inset-0 w-full h-full z-10 overflow-hidden pointer-events-none">
                             <iframe
                                 className={`absolute ${item.videoPosition || "w-[250%] h-[250%] -top-[15%] -left-[75%]"} object-cover pointer-events-none transition-opacity duration-1000 ease-in-out ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
-                                src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.youtubeId}&showinfo=0&modestbranding=1&iv_load_policy=3&rel=0${item.videoStart ? `&start=${item.videoStart}` : ''}${item.videoEnd ? `&end=${item.videoEnd}` : ''}`}
+                                src={`https://www.youtube.com/embed/${item.youtubeId.trim()}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.youtubeId.trim()}&showinfo=0&modestbranding=1&iv_load_policy=3&rel=0${item.videoStart ? `&start=${item.videoStart}` : ''}${item.videoEnd ? `&end=${item.videoEnd}` : ''}`}
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
