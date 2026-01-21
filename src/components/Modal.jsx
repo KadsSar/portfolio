@@ -129,7 +129,7 @@ const Modal = ({ item, onClose }) => {
 
                         {/* Specific Content for IT Role or Code Snippet */}
                         {(showCodeSnippet && item.codeSnippet) ? (
-                            <div className="font-mono text-sm bg-black p-4 rounded border border-gray-800 shadow-2xl h-[400px] overflow-y-auto custom-scrollbar">
+                            <div className="font-mono text-sm bg-black p-4 rounded border border-gray-800 shadow-2xl max-h-[300px] overflow-y-auto custom-scrollbar">
                                 <div className="flex space-x-2 mb-4 border-b border-gray-800 pb-2">
                                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
                                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
