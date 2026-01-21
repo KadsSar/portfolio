@@ -22,6 +22,7 @@
   body {
     @apply bg-netflix-black text-white;
     font-family: 'Inter', sans-serif;
+    --cache-bust: "force-update-v2";
   }
 }
 
