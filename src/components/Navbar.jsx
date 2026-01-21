@@ -271,6 +271,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                                                         { icon: <Menu className="w-4 h-4 text-purple-500" />, text: "Try clicking all the buttons in the pop ups, every button has unique information!", highlight: "buttons" },
                                                         { icon: <User className="w-4 h-4 text-orange-500" />, text: "Click on the profile option in the top right corner to know who I am", highlight: "profile" },
                                                         { icon: <Play className="w-4 h-4 fill-white text-white" />, text: "Try clicking on the 'watch now' button and I'll say hi!", highlight: "watch" },
+                                                        { icon: <Play className="w-4 h-4 text-white fill-black bg-white rounded-sm" />, text: "click on 'visit' button in every project to see my work directly", highlight: "visit" },
                                                         { icon: <Search className="w-4 h-4 text-gray-400" />, text: "The search option will help you find everything you want", highlight: "search" }
                                                     ].map((item, idx) => (
                                                         <div key={idx} className="flex items-start space-x-3 group/item">
