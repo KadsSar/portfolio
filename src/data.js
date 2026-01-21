@@ -543,7 +543,7 @@ export const genres = [
         image: `${BASE_URL}assets/leadership_thumbnail.png`,
         imgClassName: "object-[40%_center]",
         youtubeId: "R2qu_j6GAG8",
-        videoEnd: 15,
+        youtubeId: "R2qu_j6GAG8",
         videoPosition: "w-[250%] h-[250%] -top-[15%] -left-[45%]",
         desc: "Active participant in the developer ecosystem, leveraging teamwork and technical curiosity to solve problems in competitive and collaborative environments.",
         details: [
