@@ -226,7 +226,10 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                             <li className="relative">
                                 <span
                                     className={`hover:text-white cursor-pointer transition ${isHomeOpen ? 'text-white font-medium' : ''}`}
-                                    onClick={() => setIsHomeOpen(!isHomeOpen)}
+                                    onClick={() => {
+                                        setIsHomeOpen(!isHomeOpen);
+                                        if (!isHomeOpen) setIsBioOpen(false);
+                                    }}
                                 >
                                     Home
                                 </span>
@@ -290,7 +293,10 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                             <li className="relative">
                                 <span
                                     className={`hover:text-white cursor-pointer transition ${isBioOpen ? 'text-white font-medium' : ''}`}
-                                    onClick={() => setIsBioOpen(!isBioOpen)}
+                                    onClick={() => {
+                                        setIsBioOpen(!isBioOpen);
+                                        if (!isBioOpen) setIsHomeOpen(false);
+                                    }}
                                 >
                                     Bio
                                 </span>
