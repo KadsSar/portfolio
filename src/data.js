@@ -24,15 +24,6 @@ export const projects = [
         tags: ["R3F", "Three.js", "GSAP", "Tailwind"]
     },
     {
-        id: 3,
-        title: "LOGOS: The Semantic Platformer",
-        desc: "A 2D puzzle platformer where players type words to modify the environment (spawn bridges, balloons) using a semantic lookup system and Matter.js physics.",
-        image: `${BASE_URL}assets/logos_thumbnail.png`,
-        videoPosition: "w-[250%] h-[250%] -top-[60%] -left-[75%]", // Reverted height to original 250%
-        youtubeId: "lzK9URfHFKM",
-        tags: ["Game Design", "Matter.js", "JavaScript", "Algorithms"]
-    },
-    {
         id: 1,
         title: "Nutribudget",
         desc: "Price-aware nutrition planner using GroceryDB (nutrition + prices) with ML clustering, optimization, a Flask API, and a Next.js dashboard.",
@@ -164,7 +155,7 @@ Trained on 4,900 products
 Considers: protein, fiber, calories vs. sugar, fat, sodium
 📈 Value Predictor (Random Forest Regression)
 
-Predicts nutritional value score based on ingredients
+Predicts nutritional value scores based on ingredients
 Identifies products that offer exceptional nutritional value
 Trained with cross-validation for accuracy
 💰 Price Fairness Model (Linear Regression)
@@ -427,6 +418,15 @@ Create a feature branch (git checkout -b feature/AmazingFeature).
 Commit your changes (git commit -m 'Add some AmazingFeature').
 Push to the branch (git push origin feature/AmazingFeature).
 Open a Pull Request.`
+    },
+    {
+        id: 3,
+        title: "LOGOS: The Semantic Platformer",
+        desc: "A 2D puzzle platformer where players type words to modify the environment (spawn bridges, balloons) using a semantic lookup system and Matter.js physics.",
+        image: `${BASE_URL}assets/logos_thumbnail.png`,
+        videoPosition: "w-[250%] h-[250%] -top-[60%] -left-[75%]", // Reverted height to original 250%
+        youtubeId: "lzK9URfHFKM",
+        tags: ["Game Design", "Matter.js", "JavaScript", "Algorithms"]
     },
     {
         id: 2,
