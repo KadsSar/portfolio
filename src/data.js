@@ -287,7 +287,7 @@ Improving documentation`
         desc: "A next-generation, AI-powered banking assistant that transforms traditional financial interfaces into an intelligent, secure, and voice-activated experience.",
         image: `${BASE_URL}assets/neurobank.png`,
         youtubeId: "IieCTy5AmQU",
-        videoPosition: "w-[250%] h-[250%] -top-[55%] -left-[5%]", // Shifted further right
+        videoPosition: "w-full h-full top-0 left-0", // Full view, no zoom/crop
         link: "https://frontend-1093567910779.us-central1.run.app",
         tags: ["Next.js", "FastAPI", "GenAI", "RAG"],
         codeSnippet: `NeuroBank Guardian
