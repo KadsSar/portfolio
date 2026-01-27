@@ -366,7 +366,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                             </li>
                             <li className="hover:text-white cursor-pointer transition" onClick={onSkillsClick}>Skills</li>
                             <li className="hover:text-white cursor-pointer transition" onClick={onLeadershipClick}>Honours and Leadership</li>
-                            <li className="hover:text-white cursor-pointer transition" onClick={() => window.open('/assets/technical_resume.pdf', '_blank')}>Resume</li>
+
                             <li className="hover:text-white cursor-pointer transition">LearnLab</li>
                         </ul>
                     </div>
