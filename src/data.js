@@ -504,8 +504,8 @@ export const genres = [
         id: "toolkit",
         title: "My Toolkit",
         image: `${BASE_URL}assets/toolkit_thumbnail_v2.png`,
-        youtubeId: "4Of_dd6J-xY",
-        videoPosition: "w-[250%] h-[250%] -top-[25%] -left-[75%]",
+        youtubeId: "HAceoquch1c",
+        videoPosition: "w-[250%] h-[250%] -top-[60%] -left-[75%]",
         desc: "Equipped to build and deploy scalable applications from scratch, leveraging the JavaScript and Python ecosystems for robust architecture, and tools like Docker and Vercel for efficient, modern deployment.",
         details: [
             { title: "Languages and core", subtitle: "Python, Java, C++, C, JS", desc: "Python, Java, C++, C, JavaScript, HTML5, CSS3, R" },
@@ -545,7 +545,6 @@ export const genres = [
         title: "Leadership",
         image: `${BASE_URL}assets/leadership_thumbnail.png`,
         imgClassName: "object-[40%_center]",
-        youtubeId: "R2qu_j6GAG8",
         videoPosition: "w-[250%] h-[250%] -top-[15%] -left-[45%]",
         desc: "Active participant in the developer ecosystem, leveraging teamwork and technical curiosity to solve problems in competitive and collaborative environments.",
         details: [
