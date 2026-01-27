@@ -542,7 +542,7 @@ export const genres = [
     },
     {
         id: "hackathons",
-        title: "Leadership",
+        title: "Honours and Leadership",
         image: `${BASE_URL}assets/leadership_thumbnail.png`,
         imgClassName: "object-[40%_center]",
         videoPosition: "w-[250%] h-[250%] -top-[15%] -left-[45%]",

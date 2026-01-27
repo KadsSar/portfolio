@@ -44,10 +44,10 @@ function App() {
     // 1. Scroll page to section
     document.getElementById('select-genre')?.scrollIntoView({ behavior: 'smooth' });
 
-    // 2. Scroll the row to the 4th item (index 3) - Leadership
+    // 2. Scroll the row to the 4th item (index 3) - Honours and Leadership
     if (selectGenreRef.current) {
       setTimeout(() => {
-        selectGenreRef.current.scrollToIndex(4); // Updated index for Leadership
+        selectGenreRef.current.scrollToIndex(4); // Updated index for Honours and Leadership
       }, 500); // Small delay to allow page scroll to start/settle
     }
   };//row section completed
