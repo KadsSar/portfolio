@@ -550,7 +550,7 @@ export const genres = [
         details: [
             { title: "Alumni Mentor, FIRST Robotics Program", subtitle: "Volunteer", desc: "Provided technical consultation to regional robotics teams, guiding students through mechanical design and Java-based control systems to bridge the gap between high school engineering and university-level Computer Science." },
             { title: "Lead Developer, Hackathon Innovation Series", subtitle: "Jan 2026", desc: "Directed cross-functional teams to engineer data-driven prototypes for social impact, managing the end-to-end development of applications like NutriBudget by integrating ML models and real-time data processing to solve accessibility challenges." },
-            { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Collaborated with a team to implement real time data tracking and analysis using Python and Scikit-learn." },
+            { title: "Student Ambassador, Brock International", subtitle: "Volunteer", desc: "Represented the university’s Computer Science department to prospective global applicants, providing technical workshops and academic guidance to help incoming international students navigate their transition into the Canadian tech ecosystem." },
             { title: "Head volunteer at PAWS NGO", subtitle: "Volunteer", desc: "Head of volunteer initiatives to raise awareness about animal welfare." },
             { title: "Treasurer at Brock SSA club", subtitle: "Treasurer", desc: "Managing finances and budgeting for Brock Hindu cultural events of the club" }
         ]
