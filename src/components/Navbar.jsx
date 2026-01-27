@@ -46,7 +46,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
         { name: "About", icon: <Info size={20} />, link: "#", action: "profile" },
         { name: "My Projects", icon: <FileText size={20} />, link: "#", action: "projects" },
         { name: "Experience", icon: <Briefcase size={20} />, link: "#", action: "experience" },
-        { name: "Resume", icon: <FileText size={20} />, link: "https://docs.google.com/document/d/1WWtwPowQDK-TiIYKDOTU1kAjUbVojDDQgXu6i6443ac/edit?usp=sharing", external: true },
+        { name: "Resume", icon: <FileText size={20} />, link: "/assets/technical_resume.pdf", external: true },
         { name: "LinkedIn", icon: <Linkedin size={20} />, link: "https://www.linkedin.com/in/sarisha-kadakia", external: true },
         { name: "Github", icon: <Github size={20} />, link: "https://github.com/KadsSar", external: true },
     ];
@@ -366,6 +366,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
                             </li>
                             <li className="hover:text-white cursor-pointer transition" onClick={onSkillsClick}>Skills</li>
                             <li className="hover:text-white cursor-pointer transition" onClick={onLeadershipClick}>Honours and Leadership</li>
+                            <li className="hover:text-white cursor-pointer transition" onClick={() => window.open('/assets/technical_resume.pdf', '_blank')}>Resume</li>
                             <li className="hover:text-white cursor-pointer transition">LearnLab</li>
                         </ul>
                     </div>

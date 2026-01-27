@@ -97,7 +97,7 @@ const Hero = ({ onContactClick }) => {
                 {/* Metadata Row */}
                 <div className="flex items-center space-x-4 text-gray-300 text-sm md:text-lg font-medium drop-shadow-md">
                     <span className="text-[#46d369]">98% Match</span>
-                    <a href="https://docs.google.com/document/d/1WWtwPowQDK-TiIYKDOTU1kAjUbVojDDQgXu6i6443ac/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-white transition duration-300">Resume</a>
+                    <a href="/assets/technical_resume.pdf" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-white transition duration-300">Resume</a>
                     <span className="text-gray-500">•</span>
                     <span
                         onClick={onContactClick}
