@@ -548,7 +548,7 @@ export const genres = [
         videoPosition: "w-[250%] h-[250%] -top-[15%] -left-[45%]",
         desc: "Active participant in the developer ecosystem, leveraging teamwork and technical curiosity to solve problems in competitive and collaborative environments.",
         details: [
-            { title: "Volunteer at 2026 BrockU Robotics Competition", subtitle: "Volunteer", desc: "Mentor for teams, event coordinator" },
+            { title: "Alumni Mentor, FIRST Robotics Program", subtitle: "Volunteer", desc: "Provided technical consultation to regional robotics teams, guiding students through mechanical design and Java-based control systems to bridge the gap between high school engineering and university-level Computer Science." },
             { title: "HackVille 2026", subtitle: "Jan 2026", desc: "Developed an app within 24 hours using Python and Flask." },
             { title: "Sheridan Datathon", subtitle: "Nov 2025", desc: "Collaborated with a team to implement real time data tracking and analysis using Python and Scikit-learn." },
             { title: "Head volunteer at PAWS NGO", subtitle: "Volunteer", desc: "Head of volunteer initiatives to raise awareness about animal welfare." },
