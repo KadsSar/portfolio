@@ -46,7 +46,7 @@ const Navbar = ({ onLeadershipClick, onSkillsClick, onProjectsClick, onExperienc
         { name: "About", icon: <Info size={20} />, link: "#", action: "profile" },
         { name: "My Projects", icon: <FileText size={20} />, link: "#", action: "projects" },
         { name: "Experience", icon: <Briefcase size={20} />, link: "#", action: "experience" },
-        { name: "Resume", icon: <FileText size={20} />, link: `${import.meta.env.BASE_URL}assets/technical_resume.pdf`, external: true },
+        { name: "Resume", icon: <FileText size={20} />, link: `${import.meta.env.BASE_URL}assets/Sarisha_Kadakia_Resume.pdf`, external: true },
         { name: "LinkedIn", icon: <Linkedin size={20} />, link: "https://www.linkedin.com/in/sarisha-kadakia", external: true },
         { name: "Github", icon: <Github size={20} />, link: "https://github.com/KadsSar", external: true },
     ];
